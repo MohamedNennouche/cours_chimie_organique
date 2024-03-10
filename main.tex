@@ -1,0 +1,314 @@
+\documentclass[a4paper, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{etex}
+\usepackage[Glenn]{fncychap}
+\usepackage{wrapfig}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\topmargin}{-.8in}
+\setlength{\textheight}{9.7in}
+\setlength{\textwidth}{6.7in}
+\usepackage{fancyhdr}
+\usepackage{minitoc}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\fancyhead[C]{\textbf{Cours de Chimie Organique}}
+\renewcommand\headrulewidth{1pt}
+\fancyhead[L]{  \textbf{M. NENNOUCHE.M}}
+\fancyhead[R]{\textbf{EasyCPST}}
+\fancyfoot[R]{\textbf{\leftmark}}
+\usepackage[hidelinks]{hyperref}
+\usepackage[dvips]{xymtexpdf}
+\renewcommand\arraystretch{1.3}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\begin{document}
+\large
+\frontmatter
+% \begin{center}
+%     \vspace*{\stretch{1}}
+%     \LARGE{Nennouche Mohamed\\ Livre de Chimie Organique}
+%     \vspace*{\stretch{1}}
+% \end{center}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+%\textsc{\LARGE{Easy CPST}}\\[5cm]
+\vspace*{5cm}
+\HRule \\[0.4cm]
+{ \huge \bfseries Livre de Chimie Organique\\[0.15cm]}
+\HRule \\[1.5cm]
+
+\large
+NENNOUCHE Mohamed\\[1cm]
+\today\\
+\end{titlepage}
+\newpage
+\topskip0pt
+\begin{quotation}
+\vspace*{\stretch{1}}
+\LARGE{"Organic chemistry just now is enough to drive one mad. It gives me the impression of a primeval forest full of the most remarkable things, a monstrous and boundless thicket, with no way of escape, into which one may well dread to enter."\\
+\begin{center}
+    \textbf{Friedrich Wöhler.}
+\end{center}}
+\vspace*{\stretch{1}}
+\end{quotation}
+\newpage
+\vspace*{\fill}
+\section*{Remerciements}
+\begin{Large}
+\textit{Cet ouvrage a une importance majeure pour moi, il marque un tournant décisif dans ma vie et le faire a été une expérience incroyable. Il est le fruit de centaines d'heures de travail de recherches, de documentations, d'écriture et de vulgarisation pour avoir le cours le plus lisible et accessible à tous.}\\[0.2mm]
+
+\textit{Bien-sûr ce livre n'est pas le fruit que de mon travail personnel, et c'est pour cela que j'aimerai commencer cet ouvrage en remerciant toutes les personnes ayant contribué de près ou de loin à la réussite de ce travail. Je tiens tout d'abord à remercier l'Ecole 3/4 pour m'avoir permis d'être enseignant en Chimie Organique et cela pour 2 belles années me permettant d'être au plus près d'étudiants de toute part de l'Algérie et me permettant de comprendre leurs besoins. Je tiens aussi à remercier le groupe Easy CPST en partageant mon travail au plus grand nombre pour une utilisation à travers toutes les écoles d'Algérie. Pour conclure et non des moindres, je tiens à remercier spécialement Mme. Imane Meziane Tani ainsi que le Pr. Mokhtari Malika pour leurs remarques et corrections vis-à-vis de la première version de ce livre me permettant de l'améliorer.}
+\begin{flushright}
+   \textit{ Mohamed.}
+\end{flushright}
+\end{Large}
+\vspace*{\fill}
+\newpage
+\vspace*{0.2\textheight}
+\section*{À propos de l'auteur}
+\begin{wrapfigure}[9]{L}{0.35\textwidth}
+    \vspace*{-1cm}
+    \centering
+    \includegraphics[scale = 1]{images/Photocv.jpg}
+\end{wrapfigure}
+NENNOUCHE Mohamed, diplômé de l'\'Ecole Nationale Polytechnique du titre d'Ingénieur d'\'Etat en électronique en Juillet 2022  en double diplôme avec un Master 2 en Signal et Communication de la même école. J'ai obtenu mon Baccalauréat scientifique en 2017 avec mention très bien me permettant ainsi d'accès aux classes préparatoires en sciences et technologies abritées à l'\'Ecole Nationale Polytechnique où j'ai passé mes deux années de classes préparatoires me préparant au concours d'accès aux grandes écoles d'ingénieurs que j'ai passé en Octobre 2019. Grâce à mon classement j'ai pu accéder à la spécialité que je convoitais, l'électronique, au sein de mon école où j'ai passé 3 années jusqu'à avoir mon diplôme d'Ingénieur d'état en Juillet 2022 conclue sur mon projet de fin d'études intitulé "\textbf{Fusion de caractéristiques pour la classification des différents niveaux de démence de la maladie d’Alzheimer}".
+
+En parallèle de mes études en spécialité j'ai pu avoir plusieurs activités et expériences, en commençant par mes participations associatives auprès du Vision \& Innovation Club dans lequel je suis membre depuis Decembre 2019, j'ai pu durant l'année 2020-2021 être le chef du département Finances Logistiques et Relations Extérieures (FLER) et être un des responsable du E-lab, laboratoire de mécatronique du club. 
+
+Sur la plan professionnel, quelques mois après ma réussite au concours j'ai commencé à enseigner le module de Chimie Organique au sein de l'\'Ecole 3/4 où je suis resté deux ans en tant que chargé de ce module aimant énormément ce dernier. À travers ces années d'enseignement j'ai pu partagé, parlé et enseigné des étudiants de toute part de l'Algérie et dès le début j'ai ressenti le besoin de mettre en place une source complète pour le module à travers un ouvrage et ce qui a découlé sur la rédaction de ce livre qui a pour but premier de compléter et d'amener les détails utiles aux étudiants en deuxième années en classes préparatoires en sciences et technologies et tout étudiant ayant le module de Chimie Organique 1.
+
+Par la suite, sur le plan professionnel j'ai été Data Analyst au sein de Décathlon El Djazair, où j'ai pu aborder un nombre conséquent de concept dans le domaine de l'analyse et la science des données dans le milieu du retail. Après cette expérience et donc actuellement au moment de l'écriture de ces lignes, je suis en thèse de doctorat au sein de l'Ecole Centrale de Marseille au niveau de l'Institut Fresnel ainsi qu'enseignant en Chimie Organique et d'Informatique au sein de l'Ecole Prep'Up. 
+
+\vspace*{\fill}
+\mainmatter
+\large  
+\renewcommand{\contentsname}{Sommaire}
+\renewcommand\listfigurename{Liste des figures}
+\renewcommand\listtablename{Liste des tableaux}
+\setcounter{tocdepth}{3}
+\dominitoc
+\mtcselectlanguage{french}
+\tableofcontents
+\listoffigures
+\listoftables
+\part*{Préambule}
+\label{Préambule}
+\addcontentsline{toc}{part}{\nameref{Préambule}}
+\vspace*{8cm}
+\thispagestyle{empty}
+\begin{large}
+Avant la lecture de ce livre j'aimerai présenter ce dernier et comment j'ai imaginé son utilisation. 
+
+Ce livre est la seconde réédition, il a été relu et en principe corrigé de toutes les coquilles qui ont été maladroitement mise lors de son écriture initiale. Bien sûr l'erreur est humaine et j'invite tout lecteur trouvant une erreur ou incohérence de m'en faire part à mon adresse mail \textbf{mohamed.nennouche@g.enp.edu.dz}, merci d'avance. 
+
+J'ai tenté de faire un ouvrage résumant le module dans son entierté et fait de manière à que ce soit le plus accessible possible et simple lors de sa lecture. 
+
+J'aimerai alors encore une fois remercier toutes les personnes m'ayant aidé lors de la rédaction de ce livre, me donnant une aide précieuse dans la recherche bibliographique ou encore de la formulation de certains aspects ou points de ce cours. J'espère de tout coeur que vous trouverez en ce modeste livre toutes les informations dont vous aurez besoin pour affronter ce module. 
+
+Je vous souhaite bon courage et bonne lecture, je suis bien sûr ouvert à toute question ou éclaircissement autour de ce module et pour se faire veuillez juste m'envoyer un e-mail et je tâcherai de répondre dans les plus brefs délais. 
+\end{large}
+\fancyfoot[R]{\textbf{\leftmark}}
+\part{Introduction à la chimie organique}
+\begin{quotation}
+    \vspace*{\fill}
+    \LARGE{"Marche avec des sandales jusqu'à ce que la sagesse te procure des souliers."\\
+    \begin{center}
+        \textbf{Avicenne.}
+    \end{center}}
+\end{quotation}
+\vspace*{\fill}
+\newpage
+\vspace*{\fill}
+\section*{Définition Chimie Organique}
+
+La chimie organique est le domaine de la chimie qui traite des substances naturelles ou synthétiques formées de carbone. En effet, le carbone a la propriété de se lier par des  liaisons covalentes à d'autres atomes de carbone pour former des structures d’une grande diversité. Certaines sont très petites et gazeuses comme le méthane (gaz naturel) alors que d'autres, des macromolécules comme des protéines par exemple, peuvent être d'énormes structures qui ont une importance considérable dans la construction et le fonctionnement des êtres vivants.
+\vspace*{\fill}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPITRE 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Pré-requis}
+\minitoc
+\section{Hybridation des atomes}
+\subsection{Définition}
+En chimie, l'hybridation des orbitales atomiques est le mélange des orbitales atomiques "conventionnelles" d'un atome appartenant à la même couche électronique de manière à former de nouvelles orbitales, dites hybrides, qui permettent de mieux décrire qualitativement les liaisons entre atomes, comme observé dans l'expérience. Les orbitales hybrides sont très utiles pour expliquer la forme des orbitales atomiques observée à travers les expérimentations.
+\subsection{différents types d'orbitales atomiques}
+la théorie des orbitales atomiques est née de l'expérimentation, Dans le cas idéal, les orbitales adoptent la géométrie la plus symétrique possible; d'ailleurs la symétrie est l'un des principaux facteurs induisant la dégénérescence des niveaux d'énergie, comme c'est le cas pour les orbitales hybrides qui ont toute la même énergie.
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.75]{Capture_hybridation.PNG} 
+    \end{center}
+    \caption{Les différentes hybridations}
+    \label{fig:hybridation}
+\end{figure}
+Pour ne pas trop rentrer dans la théorie des orbitales (n'étant pas l'objectif de ce cours) nous allons simplement indiquer comment reconnaitre les hybridations des atomes à travers la formule développée ou semi-développée donnée lors des exercices, essentiellement pour l'atome de Carbone (qui est, comme dit plus tôt, au centre de la chimie organique). On va résumer cela dans le tableau \ref{tab_hybridation}:
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Cas} & \textbf{Hybridations} & \textbf{Formes géométriques} \\
+            \hline
+            Carbone avec 4 liaisons $\sigma$ & sp3 & Tétraédrique \\
+            \hline
+            Carbone avec 3 liaisons $\sigma$ et 1 liaison $\pi$ & sp2 & Plane (Triangle)\\
+            \hline
+            Carbone avec 2 liaisons $\sigma$  et 2 liaisons $\pi$ & sp & Linéaire\\
+            \hline
+        \end{tabular} 
+    \end{center}
+    \caption{Hybridation atome de Carbone}
+    \label{tab_hybridation}
+\end{table}
+
+On a par exemple la figure \ref{geo_form_hybrid_ex}, pour illustrer le principe d'hybridation : 
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{|M{2cm}|M{5cm}|}
+            \hline
+            \textbf{Molécules} & \textbf{formes géométriques}  \\
+            \hline
+            Méthane & \includegraphics[scale=0.04]{ch4.jpg} \\
+            \hline
+            \'Ethène & \includegraphics[scale=0.15]{C2H4.jpg} \\
+            \hline
+            \'Ethyne & \includegraphics[scale=0.15]{C2H2.jpg} \\
+            \hline
+        \end{tabular} 
+    \end{center}
+    \caption{forme géometrique pour chaque hybridation}
+    \label{geo_form_hybrid_ex}
+\end{table}
+
+\section{Classes du carbone}
+La classe d'un carbone indique le nombre d'autres carbones auquel il est relié via une liaison simple covalente, on a donc 4 différents cas :
+\begin{description}
+    \item[Carbone primaire :] Il a une seule liaison avec un autre carbone.
+    \item[Carbone secondaire :] Il a deux liaisons avec deux carbones.
+    \item[Carbone tertaire :] Il a trois liaisons avec trois carbones.
+    \item[Carbone quaternaire :] Il a quatre liaisons avec quatre carbones.
+\end{description}
+
+\section{Caractère nucléophile et électrophile}
+\begin{description}
+    \item[Nucléophile :] Un nucléophile (combinaison du latin \textit{nucléus} et \textit{phile} qui veut dire aimer les noyaux et donc aimer les charges positives) est un composé chimique attiré par les espèces chargées positivement.
+    \item[\'Electrophile :] Un composé chimique électrophile (combinaison du latin \textit{electro} et \textit{phile} qui indique une attirance à l'électricité et donc les électrons chargés négativement) est un composé chimique déficient en électrons. Il est caractérisé par sa capacité à former une liaison avec un autre composé en acceptant un doublet électronique de celui-ci il est généralement chargé positivement.
+\end{description}
+
+Quelques exemples d'ions et de molécules ayant un caractère nucléophile ou électrophile sont présentés dans le tableau \ref{electro_nucleo_example}.
+\begin{table}[!h]
+    \begin{center}
+        \begin{tabular}{|M{2cm}|M{2cm}|M{6cm}|}
+            \hline
+            \textbf{Caractères} & \textbf{Types} & \textbf{Exemples}\\
+            \hline
+            \multirow{2}{*}{Nucléophiles} & Ions & carbanion (C\textsuperscript{ -}), halogénures (X\textsuperscript{ -}), HO\textsuperscript{ -}, RO\textsuperscript{ -}, HS\textsuperscript{ -}, RS\textsuperscript{ -}, CN\textsuperscript{ -} \\ 
+            \cline{2-3} 
+            & Molécules & NH$_3$, amines, ROH, RSH, H$_2$O \\ 
+            \hline
+            \multirow{2}{*}{\'Electrophiles} & Ions &  Cations : carbocation (C\textsuperscript{ +}), H\textsuperscript{ +}, Be\textsuperscript{ 2+}, Al\textsuperscript{ 3+}\\
+            \cline{2-3} 
+            & Molécules &  $ BF_3 $, AlCl$_3$\\ 
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Exemples de certains ions et molécules nucléophiles et électrophiles}
+    \label{electro_nucleo_example}
+\end{table}
+\section{Indice d'insaturation}
+Le nombre d'insaturation d'une molécule est le nombre de cycles et de liaisons multiples (doubles ou triples) qu'elle comporte.
+
+la Formule pour calculer l'indice d'insaturation (ou le degrès d'insaturation) est la suivante :
+\begin{equation}
+    N_i = \frac{2n_C+2 - n_H + n_N - n_X}{2}
+\end{equation}
+tels que:
+\begin{description}
+\item[$n_C$ :] Le nombre d'atomes de carbone
+\item[$n_H$  :] Le nombre d'hydrogène
+\item[$n_N$ :] Le nombre d'atome d'azote
+\item[$n_X$ :] Le nombre d'atome d'halogène
+\end{description}
+Le nombre d'insaturation sert justement à calculer le nombre d'insaturations sachant qu'une liaison $\pi$ ou un cycle représente une insaturation. Cet indice permet d'avoir une indication pour la représentation de la molécule à partir de la formule brute en sachant le nombre d'insaturation que la molécule comporte.
+
+Par exemple, le Benzène : $C_6H_6$ alors on a:
+\begin{equation}
+    N_{i,C_6H_6}=\frac{2\times6+2-6}{2}=4
+\end{equation}
+Cela veut dire qu'il y a 4 insaturations et c'est vrai : 3 liaisons doubles + 1 cycle comme l'indique la structure du benzène représentée dans la figure \ref{fig:benzene_dev}. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.1]{images/benzene.png}
+    \caption{Forme développée d'un benzène}
+    \label{fig:benzene_dev}
+\end{figure}
+\section{Acide de Lewis}
+Un acide de Lewis (du nom du chimiste américain Gilbert Newton Lewis qui en a donné la définition) est une entité chimique dont un des atomes la constituant possède une lacune électronique, ou case quantique vide, ce qui la rend susceptible d'accepter un doublet d'électrons, et donc de créer une liaison covalente avec une base de Lewis (donneuse de doublet électronique provenant d'un doublet non liant). Cette lacune peut être notée en représentation de Lewis par un rectangle vide comme représenté dans la figure \ref{fig:lexis_example}. Aussi, les organomagnésiens R-Mg-X (très utilisés en chimie organique) sont des acides de Lewis.
+
+Les réactions acide-base selon Lewis sont donc en fait simplement des réactions de complexation. La connaissance approfondie de ces acides n'est pas demandée dans le cadre de ce cours, on reviendra dessus au chapitre des mécanismes réactionnels.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics{images/lewis_exemple.png}
+    \includegraphics[scale=0.5]{images/lewis_exemple2.png}
+    \includegraphics[scale=0.75]{images/lewis_exemple3.png}
+    \caption{Exemple d'acides de Lewis}
+    \label{fig:lexis_example}
+\end{figure}
+
+Ou plus généralement, la figure \ref{fig:lewis_list} donne une liste des acides et bases de Lewis les plus couramment utilisés. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/lewis.png} 
+    \caption{Les différents acides et bases de Lewis les plus courants}
+    \label{fig:lewis_list}
+\end{figure}
+\section{Représentations des molécules organiques dans le plan}
+Il y a différentes représentations pour une molécule organique avec plus ou moins d'informations sur cette dite molécule: le nombre d'atomes, les fonctions organiques, l'arrangement spartial de la chaîne carbonée...
+
+Les différentes représentations planes qu'on va utiliser à travers ce cours sont:
+
+\begin{itemize}
+    \item Formule développée 
+    \item Formule semi développée 
+    \item Formule topologique
+\end{itemize}
+\subsection{Formule développée}
+Cette représentation donne la nature des atomes constituant la molécule ainsi que la nature des liaisons qui les unissent. Plusieurs exemples sont illustrés dans la figure \ref{fig:developpe_examples}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.5]{images/developpe1.png}
+    \includegraphics[scale=0.3]{images/developpe2.png}
+    \includegraphics[scale=0.5]{images/developpe3.png}
+    \caption{Exemples de molécules représentées en formule développée}
+    \label{fig:developpe_examples}
+\end{figure}
+\subsection{Formule semi développée}
+La formule semi-développée représente toutes les liaisons de la formule développée sauf celles avec les atomes d’hydrogène. La figure \ref{fig:semi_dev_example} représente 3 acides aminés essentiels dans notre corps: L'Isoleucine, la Valine et la Leucine représentés en formule semi développée.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/semideveloppe4.png}
+    \caption{Isoleucine, Valine et Leucine représentés en formule semi développée}
+    \label{fig:semi_dev_example}
+\end{figure}
+\subsection{Formule Topologique}
+Cette représentation représente uniquement les liaisons carbone - carbone (avec des batonnets), les groupements significatifs (explicitement) et les liaisons avec ces groupes le reste n'est pas dessiné (donc les liaison C-H ne sont pas représentées). Plusieurs exemples sont représentés dans la figure \ref{fig:topo_example}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.2]{topo1.png}
+    \includegraphics[scale=0.35]{topo2.png}
+    \includegraphics[scale=0.5]{topo3.jpg}
+    \caption{Exemples de molécules représentées en formule topologique}
+    \label{fig:topo_example}
+\end{figure}
+\begin{quote}
+    \textbf{NOTE :} La représentation spatiale sera abordée lors du chapitre sur la stéréo-isomérie.
+\end{quote}
+\end{document}

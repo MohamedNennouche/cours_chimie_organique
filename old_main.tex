@@ -1,0 +1,2238 @@
+\documentclass[a4paper, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{etex}
+\usepackage[Glenn]{fncychap}
+\usepackage{m-pictex,m-ch-en}
+\usepackage{wrapfig}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\topmargin}{-.8in}
+\setlength{\textheight}{9.7in}
+\setlength{\textwidth}{6.7in}
+\usepackage{fancyhdr}
+\usepackage{minitoc}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\fancyhead[C]{\textbf{Cours de Chimie Organique}}
+\renewcommand\headrulewidth{1pt}
+\fancyhead[L]{  \textbf{M. NENNOUCHE.M}}
+\fancyhead[R]{\textbf{EasyCPST}}
+\fancyfoot[R]{\textbf{\leftmark}}
+\usepackage[hidelinks]{hyperref}
+\usepackage[dvips]{xymtexpdf}
+\renewcommand\arraystretch{1.3}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\begin{document}
+\large
+\frontmatter
+% \begin{center}
+%     \vspace*{\stretch{1}}
+%     \LARGE{Nennouche Mohamed\\ Livre de Chimie Organique}
+%     \vspace*{\stretch{1}}
+% \end{center}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\textsc{\LARGE{Easy CPST}}\\[5cm]
+\includegraphics[scale=0.25]{images/ENP.png} \\[1cm]
+\HRule \\[0.4cm]
+{ \huge \bfseries Livre de Chimie Organique\\[0.15cm]}
+\HRule \\[1.5cm]
+
+\large
+NENNOUCHE Mohamed\\[1cm]
+\today\\
+\end{titlepage}
+\newpage
+\topskip0pt
+\begin{quotation}
+\vspace*{\stretch{1}}
+\LARGE{"Organic chemistry just now is enough to drive one mad. It gives me the impression of a primeval forest full of the most remarkable things, a monstrous and boundless thicket, with no way of escape, into which one may well dread to enter."\\
+\begin{center}
+    \textbf{Friedrich Wöhler.}
+\end{center}}
+\vspace*{\stretch{1}}
+\end{quotation}
+\newpage
+\vspace*{\fill}
+\section*{Remerciements}
+\begin{Large}
+\textit{Cet ouvrage a une importance majeure pour moi, il marque un tournant décisif dans ma vie et le faire a été une expérience incroyable. Il est le fruit de centaines d'heures de travail de recherches, de documentations, d'écriture et de vulgarisation pour avoir le cours le plus lisible et accessible à tous.}\\[0.2mm]
+
+\textit{Bien-sûr ce livre n'est pas le fruit que de mon travail personnel, et c'est pour cela que j'aimerai commencer cet ouvrage en remerciant toutes les personnes ayant contribué de près ou de loin à la réussite de ce travail. Je tiens tout d'abord à remercier l'Ecole 3/4 pour m'avoir permis d'être enseignant en Chimie Organique et cela pour 2 belles années me permettant d'être au plus près d'étudiants de toute part de l'Algérie et me permettant de comprendre leurs besoins. Je tiens aussi à remercier le groupe Easy CPST en partageant mon travail au plus grand nombre pour une utilisation à travers toutes les écoles d'Algérie. Pour conclure et non des moindres, je tiens à remercier spécialement Mme. Imane Meziane Tani ainsi que le Pr. Mokhtari Malika pour leurs remarques et corrections vis-à-vis de la première version de ce livre me permettant de l'améliorer.}
+\begin{flushright}
+   \textit{ Mohamed.}
+\end{flushright}
+\end{Large}
+\vspace*{\fill}
+\newpage
+\vspace*{0.2\textheight}
+\section*{À propos de l'auteur}
+\begin{wrapfigure}[9]{L}{0.35\textwidth}
+    \vspace*{-1cm}
+    \centering
+    \includegraphics[scale = 1]{images/Photocv.jpg}
+\end{wrapfigure}
+NENNOUCHE Mohamed, diplômé de l'\'Ecole Nationale Polytechnique du titre d'Ingénieur d'\'Etat en électronique en Juillet 2022  en double diplôme avec un Master 2 en Signal et Communication de la même école. J'ai obtenu mon Baccalauréat scientifique en 2017 avec mention très bien me permettant ainsi d'accès aux classes préparatoires en sciences et technologies abritées à l'\'Ecole Nationale Polytechnique où j'ai passé mes deux années de classes préparatoires me préparant au concours d'accès aux grandes écoles d'ingénieurs que j'ai passé en Octobre 2019. Grâce à mon classement j'ai pu accéder à la spécialité que je convoitais, l'électronique, au sein de mon école où j'ai passé 3 années jusqu'à avoir mon diplôme d'Ingénieur d'état en Juillet 2022 conclue sur mon projet de fin d'études intitulé "\textbf{Fusion de caractéristiques pour la classification des différents niveaux de démence de la maladie d’Alzheimer}".
+
+En parallèle de mes études en spécialité j'ai pu avoir plusieurs activités et expériences, en commençant par mes participations associatives auprès du Vision \& Innovation Club dans lequel je suis membre depuis Decembre 2019, j'ai pu durant l'année 2020-2021 être le chef du département Finances Logistiques et Relations Extérieures (FLER) et être un des responsable du E-lab, laboratoire de mécatronique du club. 
+
+Sur la plan professionnel, quelques mois après ma réussite au concours j'ai commencé à enseigner le module de Chimie Organique au sein de l'\'Ecole 3/4 où je suis resté deux ans en tant que chargé de ce module aimant énormément ce dernier. À travers ces années d'enseignement j'ai pu partagé, parlé et enseigné des étudiants de toute part de l'Algérie et dès le début j'ai ressenti le besoin de mettre en place une source complète pour le module à travers un ouvrage et ce qui a découlé sur la rédaction de ce livre qui a pour but premier de compléter et d'amener les détails utiles aux étudiants en deuxième années en classes préparatoires en sciences et technologies et tout étudiant ayant le module de Chimie Organique 1.
+
+Par la suite, sur le plan professionnel j'ai été Data Analyst au sein de Décathlon El Djazair, où j'ai pu aborder un nombre conséquent de concept dans le domaine de l'analyse et la science des données dans le milieu du retail. Après cette expérience et donc actuellement au moment de l'écriture de ces lignes, je suis en thèse de doctorat au sein de l'Ecole Centrale de Marseille au niveau de l'Institut Fresnel ainsi qu'enseignant en Chimie Organique et d'Informatique au sein de l'Ecole Prep'Up. 
+
+\vspace*{\fill}
+\mainmatter
+\large  
+\renewcommand{\contentsname}{Sommaire}
+\renewcommand\listfigurename{Liste des figures}
+\renewcommand\listtablename{Liste des tableaux}
+\setcounter{tocdepth}{3}
+\dominitoc
+\mtcselectlanguage{french}
+\tableofcontents
+\listoffigures
+\listoftables
+\part*{Préambule}
+\label{Préambule}
+\addcontentsline{toc}{part}{\nameref{Préambule}}
+\vspace*{8cm}
+\thispagestyle{empty}
+\begin{large}
+Avant la lecture de ce livre j'aimerai présenter ce dernier et comment j'ai imaginé son utilisation. 
+
+Ce livre est la seconde réédition, il a été relu et en principe corrigé de toutes les coquilles qui ont été maladroitement mise lors de son écriture initiale. Bien sûr l'erreur est humaine et j'invite tout lecteur trouvant une erreur ou incohérence de m'en faire part à mon adresse mail \textbf{mohamed.nennouche@g.enp.edu.dz}, merci d'avance. 
+
+J'ai tenté de faire un ouvrage résumant le module dans son entierté et fait de manière à que ce soit le plus accessible possible et simple lors de sa lecture. 
+
+J'aimerai alors encore une fois remercier toutes les personnes m'ayant aidé lors de la rédaction de ce livre, me donnant une aide précieuse dans la recherche bibliographique ou encore de la formulation de certains aspects ou points de ce cours. J'espère de tout coeur que vous trouverez en ce modeste livre toutes les informations dont vous aurez besoin pour affronter ce module. 
+
+Je vous souhaite bon courage et bonne lecture, je suis bien sûr ouvert à toute question ou éclaircissement autour de ce module et pour se faire veuillez juste m'envoyer un e-mail et je tâcherai de répondre dans les plus brefs délais. 
+\end{large}
+\fancyfoot[R]{\textbf{\leftmark}}
+\part{Introduction à la chimie organique}
+\begin{quotation}
+    \vspace*{\fill}
+    \LARGE{"Marche avec des sandales jusqu'à ce que la sagesse te procure des souliers."\\
+    \begin{center}
+        \textbf{Avicenne.}
+    \end{center}}
+\end{quotation}
+\vspace*{\fill}
+\newpage
+\vspace*{\fill}
+\section*{Définition Chimie Organique}
+
+La chimie organique est le domaine de la chimie qui traite des substances naturelles ou synthétiques formées de carbone. En effet, le carbone a la propriété de se lier par des  liaisons covalentes à d'autres atomes de carbone pour former des structures d’une grande diversité. Certaines sont très petites et gazeuses comme le méthane (gaz naturel) alors que d'autres, des macromolécules comme des protéines par exemple, peuvent être d'énormes structures qui ont une importance considérable dans la construction et le fonctionnement des êtres vivants.
+\vspace*{\fill}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPITRE 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Pré-requis}
+\minitoc
+\section{Hybridation des atomes}
+\subsection{Définition}
+En chimie, l'hybridation des orbitales atomiques est le mélange des orbitales atomiques "conventionnelles" d'un atome appartenant à la même couche électronique de manière à former de nouvelles orbitales, dites hybrides, qui permettent de mieux décrire qualitativement les liaisons entre atomes, comme observé dans l'expérience. Les orbitales hybrides sont très utiles pour expliquer la forme des orbitales atomiques observée à travers les expérimentations.
+\subsection{différents types d'orbitales atomiques}
+la théorie des orbitales atomiques est née de l'expérimentation, Dans le cas idéal, les orbitales adoptent la géométrie la plus symétrique possible; d'ailleurs la symétrie est l'un des principaux facteurs induisant la dégénérescence des niveaux d'énergie, comme c'est le cas pour les orbitales hybrides qui ont toute la même énergie.
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.75]{Capture_hybridation.PNG} 
+    \end{center}
+    \caption{Les différentes hybridations}
+    \label{fig:hybridation}
+\end{figure}
+Pour ne pas trop rentrer dans la théorie des orbitales (n'étant pas l'objectif de ce cours) nous allons simplement indiquer comment reconnaitre les hybridations des atomes à travers la formule développée ou semi-développée donnée lors des exercices, essentiellement pour l'atome de Carbone (qui est, comme dit plus tôt, au centre de la chimie organique). On va résumer cela dans le tableau \ref{tab_hybridation}:
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Cas} & \textbf{Hybridations} & \textbf{Formes géométriques} \\
+            \hline
+            Carbone avec 4 liaisons $\sigma$ & sp3 & Tétraédrique \\
+            \hline
+            Carbone avec 3 liaisons $\sigma$ et 1 liaison $\pi$ & sp2 & Plane (Triangle)\\
+            \hline
+            Carbone avec 2 liaisons $\sigma$  et 2 liaisons $\pi$ & sp & Linéaire\\
+            \hline
+        \end{tabular} 
+    \end{center}
+    \caption{Hybridation atome de Carbone}
+    \label{tab_hybridation}
+\end{table}
+
+On a par exemple la figure \ref{geo_form_hybrid_ex}, pour illustrer le principe d'hybridation : 
+\begin{table}[!ht]
+    \begin{center}
+        \begin{tabular}{|M{2cm}|M{5cm}|}
+            \hline
+            \textbf{Molécules} & \textbf{formes géométriques}  \\
+            \hline
+            Méthane & \includegraphics[scale=0.04]{ch4.jpg} \\
+            \hline
+            \'Ethène & \includegraphics[scale=0.15]{C2H4.jpg} \\
+            \hline
+            \'Ethyne & \includegraphics[scale=0.15]{C2H2.jpg} \\
+            \hline
+        \end{tabular} 
+    \end{center}
+    \caption{forme géometrique pour chaque hybridation}
+    \label{geo_form_hybrid_ex}
+\end{table}
+
+\section{Classes du carbone}
+La classe d'un carbone indique le nombre d'autres carbones auquel il est relié via une liaison simple covalente, on a donc 4 différents cas :
+\begin{description}
+    \item[Carbone primaire :] Il a une seule liaison avec un autre carbone.
+    \item[Carbone secondaire :] Il a deux liaisons avec deux carbones.
+    \item[Carbone tertaire :] Il a trois liaisons avec trois carbones.
+    \item[Carbone quaternaire :] Il a quatre liaisons avec quatre carbones.
+\end{description}
+
+\section{Caractère nucléophile et électrophile}
+\begin{description}
+    \item[Nucléophile :] Un nucléophile (combinaison du latin \textit{nucléus} et \textit{phile} qui veut dire aimer les noyaux et donc aimer les charges positives) est un composé chimique attiré par les espèces chargées positivement.
+    \item[\'Electrophile :] Un composé chimique électrophile (combinaison du latin \textit{electro} et \textit{phile} qui indique une attirance à l'électricité et donc les électrons chargés négativement) est un composé chimique déficient en électrons. Il est caractérisé par sa capacité à former une liaison avec un autre composé en acceptant un doublet électronique de celui-ci il est généralement chargé positivement.
+\end{description}
+
+Quelques exemples d'ions et de molécules ayant un caractère nucléophile ou électrophile sont présentés dans le tableau \ref{electro_nucleo_example}.
+\begin{table}[!h]
+    \begin{center}
+        \begin{tabular}{|M{2cm}|M{2cm}|M{6cm}|}
+            \hline
+            \textbf{Caractères} & \textbf{Types} & \textbf{Exemples}\\
+            \hline
+            \multirow{2}{*}{Nucléophiles} & Ions & carbanion (C\textsuperscript{ -}), halogénures (X\textsuperscript{ -}), HO\textsuperscript{ -}, RO\textsuperscript{ -}, HS\textsuperscript{ -}, RS\textsuperscript{ -}, CN\textsuperscript{ -} \\ 
+            \cline{2-3} 
+            & Molécules & NH$_3$, amines, ROH, RSH, H$_2$O \\ 
+            \hline
+            \multirow{2}{*}{\'Electrophiles} & Ions &  Cations : carbocation (C\textsuperscript{ +}), H\textsuperscript{ +}, Be\textsuperscript{ 2+}, Al\textsuperscript{ 3+}\\
+            \cline{2-3} 
+            & Molécules &  $ BF_3 $, AlCl$_3$\\ 
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Exemples de certains ions et molécules nucléophiles et électrophiles}
+    \label{electro_nucleo_example}
+\end{table}
+\section{Indice d'insaturation}
+Le nombre d'insaturation d'une molécule est le nombre de cycles et de liaisons multiples (doubles ou triples) qu'elle comporte.
+
+la Formule pour calculer l'indice d'insaturation (ou le degrès d'insaturation) est la suivante :
+\begin{equation}
+    N_i = \frac{2n_C+2 - n_H + n_N - n_X}{2}
+\end{equation}
+tels que:
+\begin{description}
+\item[$n_C$ :] Le nombre d'atomes de carbone
+\item[$n_H$  :] Le nombre d'hydrogène
+\item[$n_N$ :] Le nombre d'atome d'azote
+\item[$n_X$ :] Le nombre d'atome d'halogène
+\end{description}
+Le nombre d'insaturation sert justement à calculer le nombre d'insaturations sachant qu'une liaison $\pi$ ou un cycle représente une insaturation. Cet indice permet d'avoir une indication pour la représentation de la molécule à partir de la formule brute en sachant le nombre d'insaturation que la molécule comporte.
+
+Par exemple, le Benzène : $C_6H_6$ alors on a:
+\begin{equation}
+    N_{i,C_6H_6}=\frac{2\times6+2-6}{2}=4
+\end{equation}
+Cela veut dire qu'il y a 4 insaturations et c'est vrai : 3 liaisons doubles + 1 cycle comme l'indique la structure du benzène représentée dans la figure \ref{fig:benzene_dev}. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.1]{images/benzene.png}
+    \caption{Forme développée d'un benzène}
+    \label{fig:benzene_dev}
+\end{figure}
+\section{Acide de Lewis}
+Un acide de Lewis (du nom du chimiste américain Gilbert Newton Lewis qui en a donné la définition) est une entité chimique dont un des atomes la constituant possède une lacune électronique, ou case quantique vide, ce qui la rend susceptible d'accepter un doublet d'électrons, et donc de créer une liaison covalente avec une base de Lewis (donneuse de doublet électronique provenant d'un doublet non liant). Cette lacune peut être notée en représentation de Lewis par un rectangle vide comme représenté dans la figure \ref{fig:lexis_example}. Aussi, les organomagnésiens R-Mg-X (très utilisés en chimie organique) sont des acides de Lewis.
+
+Les réactions acide-base selon Lewis sont donc en fait simplement des réactions de complexation. La connaissance approfondie de ces acides n'est pas demandée dans le cadre de ce cours, on reviendra dessus au chapitre des mécanismes réactionnels.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics{images/lewis_exemple.png}
+    \includegraphics[scale=0.5]{images/lewis_exemple2.png}
+    \includegraphics[scale=0.75]{images/lewis_exemple3.png}
+    \caption{Exemple d'acides de Lewis}
+    \label{fig:lexis_example}
+\end{figure}
+
+Ou plus généralement, la figure \ref{fig:lewis_list} donne une liste des acides et bases de Lewis les plus couramment utilisés. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/lewis.png} 
+    \caption{Les différents acides et bases de Lewis les plus courants}
+    \label{fig:lewis_list}
+\end{figure}
+\section{Représentations des molécules organiques dans le plan}
+Il y a différentes représentations pour une molécule organique avec plus ou moins d'informations sur cette dite molécule: le nombre d'atomes, les fonctions organiques, l'arrangement spartial de la chaîne carbonée...
+
+Les différentes représentations planes qu'on va utiliser à travers ce cours sont:
+
+\begin{itemize}
+    \item Formule développée 
+    \item Formule semi développée 
+    \item Formule topologique
+\end{itemize}
+\subsection{Formule développée}
+Cette représentation donne la nature des atomes constituant la molécule ainsi que la nature des liaisons qui les unissent. Plusieurs exemples sont illustrés dans la figure \ref{fig:developpe_examples}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.5]{images/developpe1.png}
+    \includegraphics[scale=0.3]{images/developpe2.png}
+    \includegraphics[scale=0.5]{images/developpe3.png}
+    \caption{Exemples de molécules représentées en formule développée}
+    \label{fig:developpe_examples}
+\end{figure}
+\subsection{Formule semi développée}
+La formule semi-développée représente toutes les liaisons de la formule développée sauf celles avec les atomes d’hydrogène. La figure \ref{fig:semi_dev_example} représente 3 acides aminés essentiels dans notre corps: L'Isoleucine, la Valine et la Leucine représentés en formule semi développée.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/semideveloppe4.png}
+    \caption{Isoleucine, Valine et Leucine représentés en formule semi développée}
+    \label{fig:semi_dev_example}
+\end{figure}
+\subsection{Formule Topologique}
+Cette représentation représente uniquement les liaisons carbone - carbone (avec des batonnets), les groupements significatifs (explicitement) et les liaisons avec ces groupes le reste n'est pas dessiné (donc les liaison C-H ne sont pas représentées). Plusieurs exemples sont représentés dans la figure \ref{fig:topo_example}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.2]{topo1.png}
+    \includegraphics[scale=0.35]{topo2.png}
+    \includegraphics[scale=0.5]{topo3.jpg}
+    \caption{Exemples de molécules représentées en formule topologique}
+    \label{fig:topo_example}
+\end{figure}
+\begin{quote}
+    \textbf{NOTE :} La représentation spatiale sera abordée lors du chapitre sur la stéréo-isomérie.
+\end{quote}
+\chapter{Nomenclature}
+\minitoc
+\section{Nomenclature IUPAC}
+La nomenclature de l'UICPA est un ensemble de systèmes pour nommer les composés chimiques et pour décrire la science de la chimie ou de la biochimie en général. Elle est développée et mise à jour sous les auspices de l'Union internationale de chimie pure et appliquée (UICPA, en anglais IUPAC pour International Union of Pure and Applied Chemistry).
+
+Alors, allons étapes par étapes en commençant par aborder la nomenclature des hydrocarbures (composés de carbones et d'hydrogènes) aliphatiques linéaires ou ramifiés, puis les hydrocarbures alicycliques, ensuite les hydrocarbures aromatiques et nous conclurons alors sur le principe de fonction en impliquant un certain nombre d'hétéroatome.
+
+Dans le reste de ce chapitre on utilisera les mêmes radicaux qui sont notés dans le tableau ci dessous :\\
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{nombre de carbones} & \textbf{nom du radical} \\
+    \hline
+     1 & Méthyle \\
+     \hline
+      2 & Ethyle \\
+     \hline
+      3 & Propyle \\
+     \hline
+      4 & Butyle \\
+     \hline
+      5 & Pentyle \\
+     \hline
+      6 & Hexyle \\
+     \hline
+      7 & Heptyle \\
+     \hline
+      8 & Octyle \\
+     \hline
+      9 & Nonyle \\
+     \hline
+      10 & Décyle \\
+     \hline
+\end{tabular}
+    \caption{Différents radicaux en chimie organique}
+    \label{fig:my_label}
+\end{table}
+\newline
+Il y a aussi d'autre radicaux assez particulier qui ont un nom spécifique (le nom systématique en usant des règles qu'on avancera plus tard peut aussi être utilisé, ces noms sont pour une bonne partie des noms commerciaux vu leurs récurrences dans le monde la chimie organique) : 
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Radical} & \textbf{Nom}  \\
+        \hline
+        \includegraphics[scale=0.6]{isopropyle.png} & Isopropyle \\
+        \hline
+        \includegraphics[scale=0.4]{isobutyle.png} & Isobutyle \\
+        \hline
+        \includegraphics[scale=0.8]{isopentyle1.png} & Isopentyle \\
+        \hline
+        \includegraphics[scale=0.1]{secbutyle.png} & Sec-butyle \\
+        \hline
+        \includegraphics[scale=0.8]{tertbutyle.png} & Tert-butyle \\
+        \hline
+        \includegraphics[scale=0.15]{neopentyle1.png} & Néopentyle \\
+        \hline
+    \end{tabular}
+    \caption{Radicaux particuliers}
+    \label{fig:my_label}
+\end{table}
+\newpage
+\section{Hydrocarbures aliphatiques saturés}
+\subsubsection{Les alcanes normaux}
+Les alcanes normaux ne sont constitués que d'une longue chaîne carbonée.
+
+La nomenclature est très simple il faut juste rajouter le suffixe -ane à la fin. 
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+         \textbf{Radical (sans -yle) }  & \textbf{-ane} \\
+         \hline
+    \end{tabular}
+\end{center}
+\subsubsection{Note}
+Il y a 2 cas particuliers pour les alcanes normaux, où la chaîne principale se termine par 2 ou 3 $-CH_3$ 
+\begin{itemize}
+    \item le préfixe \textbf{iso} pour les composés ayant 2 groupes $-CH_3$ a l'extrémité de la chaîne.\\
+    \textbf{Exemple :} Isohexane
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[scale=0.2]{isohexane.png}
+        \caption{Isohexane}
+        \label{fig:my_label}
+    \end{figure}
+    \newpage
+    \item le préfixe \textbf{néo} pour les composés ayant 3 groupes $-CH_3$ a l'extrémité de la chaîne.\\
+    \textbf{Exemple :} NéoHeptane
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics{neoheptane.jpg}
+        \caption{Neoheptane}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\subsubsection{Alcanes ramifiés}
+L'algorithme à suivre est le suivant :
+\begin{enumerate}
+    \item Déterminez la chaîne la plus longue : c'est la chaîne principale.
+    \item Nommez chacun des radicaux attachés à la chaîne principale.
+    \item Numérotez la chaîne principale d'une extrémité à l'autre. La direction est choisie de manière à ce que la somme des indices soit la plus petite.
+    \item Donnez à chaque radical le numéro correspondant à son branchement sur la chaîne principale.
+    \item Le nom du composé est obtenu en faisant précéder le nom de l'alacane linéaire par les noms des raidcaux \textbf{sans e}, \underline{par ordre alphabétique} précédés des chiffres indiquant leurs positions respectives, et d'un tiret.
+    \item Quand on a plusieurs substituants identiques sur la même chaîne, on indique les numéros de position pour chacun d'eux et on utilise les préfixes : di, tri, tétra, penta... (2, 3, 4, 5...) qui n'interviennent pas dans le classement par ordre alphabétique.
+    \item Si la chaîne latérale est encore ramifiée, son nom est mis entre parenthèses et on l'écrit après le numéro de la chaîne principale auquel elle est rattachée.
+    \item Lorsque deux chaînes d'égale longueur sont en compétition, on choisit la chaîne qui a le plus de ramifications.
+\end{enumerate}
+\section{Hydrocarbures aliphatiques insaturés}
+\subsubsection{Alcène}
+Un Alcène est un hydrocarbure ayant au moins une double liaison et donc pour sa nomenclature :\\
+\begin{itemize}
+    \item La double liaison doit avoir l'indice le plus petit possible
+    \item La position de la double liaison est toujours indiquée par le numéro du premier atome de carbone doublement lié
+    \item Si y a plusieurs doubles liaisons, la chaîne principale est la chaîne comportant le plus de doubles liaisons et on fait précéder le suffixe -yne par di, tri, tétra... (pour 2, 3, 4 doubles laisons respectivement)
+\end{itemize}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+         \textbf{Radical (sans -yle) }  & \textbf{nombre de doubles liaisons} & \textbf{rang de la double liaison + -ène} \\
+         \hline
+    \end{tabular}
+\end{center}
+Il y a certains radicaux alkyles qui ont des noms spécifiques :
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Formule} & \textbf{Nom à utiliser}  \\
+        \hline
+        \includegraphics[scale=0.8]{vinyl.png} & Vinyle au lieu éthényle \\
+        \hline
+        \includegraphics[scale=0.4]{allyle.png} & Allyle au lieu de prop-2-ènyle \\
+        \hline
+    \end{tabular}
+    \caption{Radicaux particuliers}
+    \label{tab:my_label}
+\end{table}
+\subsection{Alcynes}
+Les alcynes sont des hydrocarbures insaturés composés d'au moins une triple liaison (une liaison $\sigma$ et deux recouvrement $\pi$).
+
+La nomenclature se base sur les mêmes principes que celles des alcènes
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Radical}  & \textbf{nombre de triples liaisons} & \textbf{rang de la  liaison + -yne} \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Note Importante}
+Si y a co-existence des deux dans le même composé (doubles liaisons et triples liaisons) l'alcène est prioritaire sur l'alcyne, la terminaison s'écrit sous la forme -ènyne. 
+\section{Hydrocarbures alicycliques}
+On a différents cycles qu'on peut lister ainsi :
+\begin{itemize}
+    \item Cyclanes $C_nH_{2n}$
+    \item Cyclènes $C_nH_{2n-2}$
+    \item Cyclynes $C_nH_{2n-4}$
+\end{itemize}
+Et pour la nomenclature c'est juste légèrement différent des hydrocarbures aliphatiques :
+\begin{enumerate}
+    \item Le cycle porte le nom de l'hydrocarbure aliphatique correspondant en rajoutant en préfixe \textbf{-Cyclo}.
+    \item Lorsque le cyclane est poly substitué, on numérote en mettant en premier le substituant classé premier par ordre alphabétique et on continue de telle sorte que le deuxième substituant par ordre alphabétique ait l'indice le plus bas.
+    \item Si c'est un Cyclène ou Cyclyne, les règles relatives aux hydrocarbures aliphatiques doivent être appliquées.
+\end{enumerate}
+\subsection{Exemples}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Cycles} & \textbf{Nomenclatures} \\
+        \hline
+        \includegraphics[scale=0.2]{cyclohexane.png} & Cyclohexane \\
+         \hline
+         \includegraphics[scale=0.3]{chloroethylcyclohexane.png} & 1-ChloroEthylCycloHexane\\
+         \hline
+         \includegraphics[scale=0.25]{methylcyclopentene.png} & 3-MethylCyclopentène \\
+         \hline
+    \end{tabular}
+        \caption{Nomenclature des cycles}
+    \label{tab:my_label}
+\end{table}
+\subsection{Composés aromatiques}
+\subsubsection{Comment reconnaître un composé aromatique ?}
+En chimie organique, les composés aromatiques sont des molécules telles que le benzène dont les atomes forment des structures cycliques et planes particulièrement stables. Le terme « aromatique », introduit par August Wilhelm von Hofmann en 1855. Il a ainsi introduit ces composés et comment les reconnaître d'après la règle à son nom. 
+\paragraph{Règle de Hückel}
+Un composé est dit aromatique si :
+\begin{itemize}
+    \item Il est cyclique.
+    \item Tous les atomes du cycle possèdent une orbitale p.
+    \item  Il est plan (ou quasiment plan) de façon à permettre un recouvrement des orbitales p (celles-ci sont donc perpendiculaires au plan du cycle).
+    \item  Il possède 4n+2 électrons $\pi$ , avec n entier, valant 1,2,3,...... engagés dans le recouvrement des orbitales.
+    \item De la délocalisation des électrons p résulte une diminution de l'énergie électronique.
+\end{itemize}
+Si on doit retenir quelque chose de cette règle c'est que pour reconnaître un composé aromatique il faut qu'il soit \textbf{cyclique} et tous les atomes impliqués partagent un total de 4n+2 électrons à travers leurs orbitales, où n est un entier positif. 
+
+On va surtout s'intéresser au benzène qui a tous ses carbones présentent une hybridation sp2, d'où délocalisation des électrons qui circulent sur les six sommets et planéité du cycle. Le benzène montre une stabilité exceptionnelle.
+
+Il y a certain radicaux aromatiques qui ont des noms particuliers :
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=1.5]{phenyle_benzyle.png}
+    \caption{Rdicaux benzène}
+    \label{fig:my_label}
+\end{figure}
+\subsubsection{Composés benzène monosubstitués}
+La chaîne principale est le benzène et il a un groupement, alors le nom de la molécule est le nom du groupement suivi du mot benzène mais la majorité ont des noms d'usages, par exemple :
+\vspace{0.5cm}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Composé} & \textbf{Nom d'après l'IUPAC} &\textbf{Nom commun}  \\
+    \hline
+     \includegraphics[scale=0.5]{toluene.png} & MéthylBenzène & Toluène \\
+     \hline
+     \includegraphics[scale=0.45]{cumene.png} & Isoprpylbenzène & Cumène \\
+     \hline
+     \includegraphics[scale=0.3]{styrene.jpg} & Vinylbenzène & Styrène \\
+     \hline
+    \end{tabular} 
+    \caption{Benzène monosubstitué}
+    \label{tab:my_label}
+\end{table}
+\subsubsection{Composés disubstitués}
+Cette nomenclature est propre au benzène disubstitué ayant 3 combinaisons possibles :
+\begin{itemize}
+    \item Positions 1,2 : ortho (o).
+    \item Positions 1,3 : méta (m).
+    \item Positions 1,4 : para (p).
+\end{itemize}
+\subsubsection{Exemples :}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{orthometapara.png}
+    \includegraphics[scale=0.6]{note.PNG}
+    \caption{Exemples d'utilisation de la nomenclature ortho, méta, para}
+    \label{fig:my_label}
+\end{figure}
+\textbf{NOTE IMPORTANTE : } Ce principe marche aussi avec les fonctions qu'on verra juste après (l'orthodiméthylphénole par exemple)
+\subsubsection{Composés polysubstitués}
+La nomenclature ici se fait comme précédemment avec la nomenclature des molécules linéaires.
+\subsubsection{Exemple :}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{c10h14.png}
+    \caption{1-Ethyl-2,4-diméthylbenzène}
+    \label{1-Ethyl-2,4-diméthylbenzène}
+\end{figure}
+\section{Fonctions dans la chimie organique}
+Il est souvent, dans la chimie organique, courant de voir des molécules constituées de certains groupements d'atomes bien particuliers qu'on va nommer fonctions et qui donnent des caractéristiques particulières à la dite molécule, ces différents groupements peuvent être constitués de carbones et d'hydrogènes ou aussi d'hétéro-atomes comme l'azote ou l'oxygène...
+\subsection{Classification des fonctions}
+La classification d'une fonction se fait par rapport à sa valence. La valence d'une focntion est le nombre d'atomes d'hydrogènes (ou de carbones) que remplace le groupe fonctionnel dans une chaîne carbonée saturée, on peut avoir des groupements monovalents, divalents et trivalents. 
+\subsection{Algorithme pour la nomenclature}
+\begin{enumerate}
+    \item Identifier la fonction principale avec la plus grande valence. Elle apparaît en suffixe dans le nom du composé, les fonctions secondaires et les substituants apparaissent en préfixe.
+    \item Identifier la chaîne carbonée linéaire ou cyclique la plus longue rattachée à la fonction principale et lui donner le nom de l'alcane correspondant, on va numéroter la chaîne de telle sorte que la fonction principale soit dotée du plus petit indice possible.
+    \item Ajouter au nom de la chaîne le suffixe de la fonction principale (avec la position).
+    \item \'Ecrire les noms des substituants et des fonctions secondaires en préfixe par ordre alphabétique avec leurs numéros de position.
+\end{enumerate}
+On va mettre les principales fonctions dans le tableau suivant : 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{Fonctions}} & \textbf{Groupes Fonctionnel} & \textbf{Préfixe} & \textbf{Suffixe} \\
+        \hline
+        \multirow{5}{*}{Trivalente} & Acide carboxylique &  -COOH & / & Acide...oïque \\
+         & Ester & -COOR & Carboalcoxy- & ...oate d'Alkyle \\ 
+        & Halogénure d'acide & -COX &  Haloformyl- & Halogénure de... oyle \\
+        & Amide & $-CONH_2$ & Carboxamido- & ...amide \\
+        & Nitrile & $-C \equiv N$ & Cyano- & ...onitrile \\
+        \hline
+        \multirow{2}{*}{Divalente} & Aldéhyde & -CHO & Formyl- & ...al \\
+        & Cétone & -C=O & Oxo- & ...one \\
+        \hline
+        \multirow{3}{*}{Monovalente} & Alcool & -OH & Hydroxy & ...ol \\
+        & Ether & R-O-R & Alcoxy- * & Ether...ique \\
+        & Amine & $-NH_2$ & Amino & ...amine \\
+        \hline
+        \multirow{2}{*}{}& Alcène & -CH=CH- & / & ...ène \\
+        & Alcyne & $-C \equiv C-$ & / & ...yne \\
+        \hline
+        Monovalente & Halogénure d'alkyle & -RX & Halogéno- & Halogénure d'alkyle \\
+        \hline
+    \end{tabular}
+    \caption{Nomenclature des fonctions}
+    \label{fig:my_label}
+\end{table}
+\subsection*{Notes sur la nomenclature}
+\subsubsection{Amides et amines}
+Il y a différentes classes d'amides et d'amines qu'on peut regrouper ainsi :
+\begin{description}
+    \item[Primaire :] $R-NH_2$ / $R-CONH_2$
+    \item[Secondaire :] $RR'-NH$ / $RR'-CONH$
+    \item[Tertiaire :] $RR'R''-N$ / $RR'R''-CON$
+\end{description}
+Alors pour la nomenclature on arrange les substiuants attaché à l'azote par ordre alphabétique et on précède chacun par un N.\\ 
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{amine.PNG}
+    \caption{Exemples d'amines}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+Aussi s'il y a la fonction principale et il y a aussi des doubles ou triples liaisons, on met les suffixes -ène ou -yne avant le suffixe de la fonction principale. 
+
+Quand il y a dans la même molécule des doubles et des triples liaisons, l'alcène est prioritaire par rapport à l'alcyne et la terminaison se fait avec le suffixe -ényne.
+
+Pour les Esters en tant que fonction secondaire on a : selon les cas ou bien le préfixe Carboalcoxy- (dans le cas où la chaîne contenant la fonction principale est rattachée au C de la fonction fonction -COO- de l'ester) ou bien le préfixe Oxycarbonyl- (dans le cas dans le cas où la chaîne contenant la fonction principale est rattachée au O de la fonction fonction -COO- de l'ester).
+
+\part{Stéréochimie}
+\begin{quotation}
+\vspace*{7cm}
+\LARGE{"Nous ne pouvons procéder pour nous instruire, que du connu à l’inconnu."\\
+\begin{center}
+    \textbf{Traité élémentaire de chimie, Antoine Laurent de Lavoisier.}
+\end{center}}
+\end{quotation}
+\chapter{Rappels et définitions}
+\minitoc
+\section{Rappel sur l'hybridation}
+On peut rappeler briévenement l'hybridation des atomes qu'on a traité dans la première partie, on aura à retenir le tableau suivant pour le reste : 
+\begin{table}[!h]
+    \centering
+   \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{différents cas} & \textbf{hybridation} &  \textbf{formes géométriques} \\
+    \hline
+    Carbone avec 4 liaisons $\sigma$ & sp3 & tétraédrique\\
+    \hline
+    Carbone avec 3 liaisons $\sigma$ et 1 liaison $\pi$ & sp2 & plane (triangulaire)\\
+    \hline
+    Carbone avec 2 liaisons $\sigma$  et 2 liaisons $\pi$ & sp & linéaire\\
+    \hline
+\end{tabular} 
+    \caption{Hybridation atome de Carbone}
+    \label{Figure 2}
+\end{table}
+
+Alors l'hybridation sera utilisée dans ce chapitre pour la représentation spatiale des molécules organiques ainsi que la définition de certains points qu'on abordera par la suite.
+\section{Définitions}
+\subsection{Isomére et isomérie}
+En chimie organique, on parle d'isomérie lorsque deux molécules possèdent la même formule brute mais ont des formules développées différentes. Ces molécules, appelées isomères, peuvent avoir des propriétés physiques, chimiques et biologiques différentes.
+
+Le terme isomérie vient du grec $\iota\sigma o\zeta$ (isos = identique) et $\mu\epsilon\rho o\zeta$ (meros = partie).
+
+On distinguera dans ce cours deux types d'isoméries, tout d'abord l'isomérie plane où on étudiera la configuration plane des molécules ainsi que la stéréochimie où la différence sera dans la stéréochimie des molécules et non plus dans le plan\\
+Exemples de stéréoisomères :\\
+\begin{itemize}
+    \item Fructose et Glucose.
+    \item Cyclohexane (chaise et bâteau).
+     \item butan-2-ol et 2-méthylpropanol.
+\end{itemize}
+\subsection{Carbone asymétrique}
+Un carbone asymétrique est un carbone \textbf{Hybridé $sp_3$} dont les 4 liaisons qu'il dispose relient 4 groupements d'atomes (ou atomes) différents. Voilà quelques exemples de molécules contenant des carbones asymétriques :
+\begin{figure}[!ht]
+    \centering
+    %\vspace*{-8cm}
+    \includegraphics{carbone_asym_1.PNG}
+    \includegraphics{carbone_asym_2.PNG}
+    \includegraphics{carbone_asym_3.PNG}
+    \caption{Carbones asymétriques}
+    \label{fig:my_label}
+\end{figure}
+
+\chapter{Représentations dans l'espace}
+\minitoc
+Alors à partir de 3 atomes une molécule à une forme spatiale déterminée et donc il faut avoir des représentations normalisées pour la description la plus fidèle de ces dites molécules. Alors il existe différentes représentations.
+\section{Représentation en perspective ou cavalière}
+Cette représentation se fait par rapport à une liaison simple carbone-carbone, la molécule est représentée de telle sorte que toutes les liaisons des deux atomes de carbones soient visibles. Cette représentation est assez peu utilisée.\\
+Exemple: le  2,3-diméthylbutane\\
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{perspective.PNG}
+    \caption{Exemple de représentation en perspective}
+    \label{fig:my_label}
+\end{figure}
+\section{Représentation de Cram}
+La représentation de Cram introduite par le chimiste américain D. J. Cram (UCLA) en 1953 permet de montrer la forme dans l'espace d'une molécule, et sa structure. Elle n'est valable que pour des atomes hybridés $sp_3$ (qui est justement de forme spatiale : tétraédrique) et dans ce cours elle sera utilisée spécialement pour les atomes de carbones hybridés $sp_3$.
+\subsection{Convention de Cram}
+\begin{description}
+    \item[Liaison dans le plan :] trait simple.
+    \item[Liaison en arrière du plan :] trait pointillé.
+    \item[Liaison en avant du plan :] un triangle plein, pointé vers le plan.
+\end{description}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Liaisons dans l'espace & représentations  \\
+        \hline
+        Liaison dans le plan & \includegraphics[]{trait_simple.PNG} \\ 
+        \hline
+        Liaison en arrière du plan & \includegraphics[]{pointille.PNG}\\
+        \hline
+        Liaison en avant du plan & \includegraphics[]{triangle.PNG}\\
+        \hline
+    \end{tabular}
+    \caption{Convention de Cram}
+    \label{tab:my_label}
+\end{table}
+
+On va illustrer ca ensuite à travers quelques exemples :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{cram_1.PNG}
+    \includegraphics[scale=0.5]{cram_2.png}
+    \includegraphics[scale=0.2]{cram_3.jpg}
+    \includegraphics{cram_4.PNG}
+    \caption{Exemples de représentation de Cram}
+    \label{fig:my_label}
+\end{figure}
+\section{Représentation de Newmann}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{nawman_3.PNG}
+    \caption{Principe de la représentation de Newmann}
+    \label{fig:my_label}
+\end{figure}
+Cette technique de projection porte le nom du chimiste américain Melvin Spencer Newman (Ohio University) qui l'a introduite en 1952. La molécule est dessinée en projection selon une liaison C-C perpendiculaire au plan du papier. tels que les deux carbones de la liaosn sont projetés en un même point et son respectivement représentés par un cercle et son centre. tels que le 1\textsuperscript{er} observé représente le centre du cercle et la circonférence représente le 2\textsuperscript{ème} carbone. 
+
+L'exemple suivant est celui de la molécule de butane en projection selon C2-C3.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{nawman_1.PNG}
+    \caption{Représentation de Newmann sur une chaîne linéaire}
+    \label{fig:my_label}
+\end{figure}
+La projection de Newman est intéressante dans le cas de molécules cycliques comme le cyclohexane qu'on va aborder plus en détails par la suite, car elle permet de mettre clairement en évidence les différents angles dièdres (et ainsi démontré la stabilité de la forme chaise).
+\begin{figure}[!h]
+    \centering
+    \includegraphics{nawman_2.PNG}
+    \caption{Représentation de Newmann dans le cas du cyclohexane}
+    \label{fig:my_label}
+\end{figure}
+\textbf{NOTE IMPORTANTE :} Précision du sens où on voit la liaison est importante dans la représentation de Newmann donc il va de soit de préciser cela lors de l'utilisation de cette dernière (par exemple une représentation suivant une liaison $C_2-C_3$ n'est pas la même que la représentation suivant le sens $C_3-C_2$.
+\section{Représentation de Fischer}
+Le chimiste allemand E. Fischer (prix Nobel 1902) à qui l'on doit notamment la détermination de la stéréochimie complète du glucose, ainsi que le modèle "clé-serrure" (en anglais : lock-key) est le créateur d'un mode de représentation très utilisé dans la chimie des sucres et des acides aminés. Les conventions sont les suivantes :\\
+\begin{itemize}
+    \item la chaîne carbonée principale est dessinée verticalement.
+    \item l'atome de carbone qui porte l'indice le plus petit (porteur de la fonction aldéhyde dans le cas d'un sucre) est placé en haut.
+    \item les groupes sur l'horizontale pointent vers l'avant du plan.
+    \item les carbones représentés sont tous des \textbf{carbones asymétriques}.
+    \item la première liaison verticale ainsi que la dernière sont en arrière du plan.
+\end{itemize}
+Voilà quelques exemples pour illustrer cette représentation :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{fisher_1.PNG}\\
+    \includegraphics{fisher_2.PNG}
+    \caption{Exemples de représentation de Fischer}
+    \label{fig:my_label}
+\end{figure}
+Dans cette représentation la disposition des liaisons est importante et donne une représentation différentes et c'est pour cela que ca va servir à l'études des isomères optiques particulièrement.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{fisher_3.PNG}
+    \caption{Importance de Fischer dans la représentation des énantiomères}
+    \label{fig:my_label}
+\end{figure}
+\chapter{Isomérie plane}
+\minitoc
+Maintenant les définitions et les différentes représentations utilisées dans la suite du cours étant établies, on va passer à la première partie de ce chapitre qui portera sur l'isomérie plane.
+
+L'isomérie plane est l'étude de la relation d'isomérie entre deux molécules ayant la même formule brute mais de formes planes différentes d'un point de vu constitutionnel. On pourra alors distinguer trois sortes d'isoméries planes qu'on va aborder dans cette partie :\\
+\begin{itemize}
+    \item Isomérie de chaîne (squelette).
+    \item Isomérie de position.
+    \item Isomérie de fonction.
+\end{itemize}
+\section{Isomérie de chaîne ou de squelette}
+L'isomérie de chaîne (ou de squelette) désigne les isomères qui diffèrent par leur chaîne carbonée. soit le changement dans la constitution de la chaîne principale ou le déplacement d'un groupement alkyle.\\
+Exemple : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{chaine_1.png}
+    \includegraphics[scale=0.3]{chaine_2.png}
+    \caption{Exemples d'isomérie plane}
+    \label{fig:my_label}
+\end{figure}
+\section{Isomérie de position}
+L'isomérie de position qualifie les isomères dont un groupe fonctionnel est placé sur des carbones différents de la chaîne carbonée, ce qui veut dire que c'est la fonction qui se déplace à l'intérieur du squelette sans changer la nature de la fonction bien évidemment. Voilà un exemple d'une relation d'isomérie de positions entre les deux molécules suivante.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{position_1.PNG}
+    \caption{Exemple d'isomérie de position}
+    \label{fig:my_label}
+\end{figure}
+Remarque : même le déplacement d'une double ou triple liaison est une isomérie de position étant donné que c'est comptabilisé comme une fonction.
+\section{Isomérie de fonction}
+L'isomérie de fonction caractérise les isomères dont les groupes fonctionnels sont différents, donc de propriétés physico-chimiques différentes et ayant la même formule brute. Exemples :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=1.5]{fonction_1.PNG}\\
+    \includegraphics[]{fonction_4.PNG}\\
+    \includegraphics[]{fonction_3.PNG}
+    \caption{Exemples d'isomérie de fonction}
+    \label{fig:my_label}
+\end{figure}
+\section{Tautomérie}
+La tautomérie est un équilibre cinétique (chimique) entre deux isomères de constitutions dont l'un se transforme en l'autre de manière reversible par migration d'un atome au sein de la molécule, l'exemple le plus connu est la tautomérie céto-énolique.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[]{tautomerie.png}
+    \caption{Réaction céto-énolique}
+    \label{fig:my_label}
+\end{figure}
+\chapter{Stéréo-isomérie}
+\minitoc
+La stéréo-isomérie est l'étude de la relation constitutionnelle entre deux molécules de même formule brute mais de forme \textbf{dans l'espace} différentes faisant découlé des propriétés chimiques, physique ou optiques. On abordera alors dans ce chapitre :
+\begin{itemize}
+    \item Les isomères de conformations.
+    \item Les isomères de configurations.
+\end{itemize}
+où les isomères de configurations on peut le diviser ainsi:
+\begin{itemize}
+    \item \'Enantiomères.
+    \item Diastéréoisomères.
+\end{itemize}
+\section{Isomérie de conformation}
+On appelle isomère de conformation ou tout simplement conformères deux ou plusieurs composés organiques pouvant se convertir l'un en l'autre par simple rotation d'un angle $\alpha$ autour d'une liaison simple C-C, on va utiliser dans cette partie la représentation de Newmann pour expliquer les différentes rotations ainsi que la stabilité d'un point de vu énergitique de chacune des formes.
+
+On peut d'abord dire que pour chaque composé pouvant avoir des conformères, il a donc un nombre infini car à chaque angle $\alpha$ correspond un conformère différent mais on pourra distinguer deux sortes principaux de conformère : eclipsé et décalé comme indiqué dans la figure suivante tels que la forme de gauche représente la forme éclipsée et la forme de droite la forme décalée: 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{conformere_1.PNG}
+    \caption{Forme éclipsée et décalée}
+    \label{fig:my_label}
+\end{figure}
+\newline
+Aussi un autre exemple pour l'éthane on peut voir qu'il a principalement 6 conformères distincts :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{conformere_2.jpg}
+    \caption{Conformères de l'éthane}
+    \label{fig:my_label}
+\end{figure}
+
+Dans la majorité des cas les formes décalés sont plus stables que les formes éclipsées, logiquement plus on éloigne des groupements plus l'energie potentielle pour garder la molécule stable est faible donc la rendant plus stable, sauf dans le cas ou le rapprochement de groupement d'atomes provoque la création de liaisons particulières telles que les liaisons hydrogènes qui, au contraire, renforce la stabilité de la molécule. 
+
+On aura alors un graphique indiquant les variations d'énergie potentielle en fonction de l'angle $\alpha$ comme suit pour une molécule de butane : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.78]{conformere_3.PNG}
+    \caption{Diagramme d'énergie du butane}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+Sachant que plus l'energie potentielle est petite plus la molécule est stable et par là on remarque effectivement que les formes décalées sont plus stables que les formes éclipsées.
+
+On appelle aussi la forme décalée la plus stable : \textbf{forme anti} comme l'indique la figure suivante 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{conformere_4.png}
+    \caption{Principales formes des conformères}
+    \label{fig:my_label}
+\end{figure}
+
+On va dans ce chapitre aborder les conformères d'une molécule en particulier qui est le cyclohexane.
+
+La cyclisation provoque des tensions qui diminue la stabilités des molécules mais à partir de 5 carbones les cycles sont stables car l'angle de valence est proche de l'angle de valence du carbone $sp_3$ qui est de 109\textsuperscript{o}, dans le cyclohexane seul 4 atomes de carbones sont dans un même plan, il peut se présenter sous deux conformations principales non planes: la conformation \textbf{chaise} et la conformation \textbf{bâteau}. Il y a aussi d'autres conformères (bâteau croisé et enveloppe mais dont l'intérêt est moindre dans notre étude). 
+
+Ces formes sont en équilibre mutuel alors à chaque instant le passage de l'une vers l'autre se fait continuellement, mais la conformation chaise reste plus stable que la conformation bâteau car cette dernière présente 8 liaisons C-H éclipsées 2 à 2, dans la conformation chaise toutes les liaisons C-H sont décalées (comme indiqué par sa représetation en Newmann mise précédemment).
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{cyclohexane_2.png}
+    \caption{Conformères chaise et bâteau}
+    \label{fig:my_label}
+\end{figure}
+
+Le diagramme d'énergie du cyclohexane en fonction de l'angle de rotation est comme suit :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.3]{cyclohexane_4.png}
+    \caption{Diagramme d'energie du cyclohexane}
+    \label{fig:my_label}
+\end{figure}
+
+On voit clairement que les formes chaises sont plus stables que les formes bâteaux, les deux autres formes sont des formes transitoires (enveloppe et chaise croisée).
+
+Dans la conformation chaise il y a deux sortes de liaisons C-H : les laisons équatoriales et les liaisons axiales.
+
+Les liaisons axiales sont au nombre de 6 (une pour chaque carbone) et sont perpendiculaire au plan et placés alternativement de part et d'autre de ce dit plan, soit si le carbone $C_1$ a sa liaison axiale dirigée vers le haut alors le carbone voisin aura sa liaison axiale dirigé vers le bas et ainsi de suite.
+
+Les liaisons équatoriales sont au nombre de 6 aussi et sont dans le plan et pour la placer c'est très simple, c'est à l'opposé des liaisons axiales, donc si on a une liaison axiale vers le haut on aura donc une liaison équatoriale vers le bas et inversement. 
+
+Lors de l'équilibre entre les différentes conformations donnant deux types de cyclohexanes chaise les liaisons axiales de la première forme deviennent des liaisons équatoriales dans la 2ème forme chaise et les liaisons axiales dans la première deviennent logiquement des liaisons équatoriales dans la seconde forme.
+\subsection{Cyclohexane substitué}
+Le cyclohexane est souvent doté de substitutions et donc en étudiant sa conformation la plus stable qui est la conformation chaise, on peut voir le type de liaison qu'a chaque substituant pour que la molécule reste la plus stable possible.
+
+Alors la position énergétiquement la plus favorable pour un substituant est la position la moins encombrée qui est la position équatoriale.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Substituant méthyl & Axial & \'Equatorial \\
+        \hline
+        \raisebox{8ex}{Intéractions $CH_3$ avec C-C} & \includegraphics{cyclo11.PNG} & \includegraphics{cyclo12.PNG} \\
+        \hline
+        \raisebox{8ex}{intéractions $CH_3$ avec C-H} & \includegraphics{cyclo21.PNG} & \includegraphics{cyclo22.PNG} \\
+        \hline
+    \end{tabular}
+    \caption{Intéraction d'un substituant méthyle dans le cyclohexane}
+    \label{tab:my_label}
+\end{table}
+\newpage
+On observe bien que la configuration en équatorial donne une plus grande liberté à la liaison $C-CH_3$ pour se placer au plus loin (en anti) par rapport aux autres liaison C-H, ce qui assure une plus grande stabilité en minimisant les intéractions avec les autres groupements.
+\subsubsection{Cas du cyclohexane disubstitué}
+Quand le cyclohexane est disubstitué on sera amené à voir la stabilité de cette dite molécule, et cela en faisant du cas par cas tels que les différents cas se résume dans le tableau suivant :
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Cas & Substituant 1 & Substituant 2\\
+        \hline
+        1 & Axial & Axial \\
+        \hline
+        2 & Axial & \'Equatorial \\
+        \hline
+        3 & \'Equatorial & \'Equatorial \\
+        \hline
+        4 & \'Equatorial & Axial\\
+        \hline
+    \end{tabular}
+    \caption{Différents cas d'un cyclohexane disubstitué}
+    \label{tab:my_label}
+\end{table}
+
+On fait l'étude de telle sorte que (dans la majorité des cas) les deux substituants soient le plus éloigné possible. Sauf dans le cas où leur rapprochement augmente la stabilité de la molécule (avec la formation de ponts Hydrogènes par exemple).
+
+\textbf{Exemple :} La configuration de gauche est plus stable que celle de droite par rapport à la position des deux substituants.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{cyclodouble.PNG}
+    \caption{Cyclohexane disubstitué}
+    \label{fig:my_label}
+\end{figure}
+Cette partie sera abordée plus en détails à travers des exercices.
+\section{Isomérie de configuration}
+On a maintenant un autre type d'isomérie qui, au contraire des conformères abordés précédemment, a un nombre \textbf{fini} d'isomères qu'on appellera isomères de configurations qui ont des propriétés physicochimiques bien particulières. On peut distinguer deux types :
+\begin{itemize}
+    \item Diastéréo-isomérie (en particulier l'isomérie géométrique).
+    \item \'Enantiomérie (isomérie optique).
+\end{itemize}
+\subsection{Isomérie géométrique (éthylénique)}
+\begin{figure}[!h]
+    \centering
+     \includegraphics{isomerie_geometrique.PNG}
+    \caption{Conditions de l'isomérie géométrique}
+    \label{fig:my_label}
+\end{figure}
+Pour qu'on ait des isomères géométriques il nous faut deux conditions :
+\begin{itemize}
+    \item Il faut avoir une double liaison C=C (une insaturation plus généralement).
+    \item Il faut avoir $a \ne b$ et $c \ne d$
+\end{itemize}
+\subsubsection{Nomenclature Cis-Trans}
+Cette nomenclature n'est utilisé que dans le cas des molécules disubstituées (chaque carbone portant un hydrogène) présentant les conditions de l'isomérie géométrique, tels que l'isomère a la configuration Cis si les H liés aux carbones de la double liaison sont du même côté de cette double liaison, l'isomère a la configuration Trans si les deux hydrogènes sont de cotés opposés par rapport à la double liaison.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{cistrans_1.png}
+    \caption{Les formes Cis et Trans}
+    \label{fig:my_label}
+\end{figure}
+
+Alors on peut prendre quelques exemples :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{cistrans.jpg}
+    \includegraphics[scale=0.7]{cistrans_2.PNG}
+    \caption{Exemples d'utilisation de la nomenclature Cis-Trans}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\subsubsection{Nomenclature Z-E (Règle séquentielle de Cahn Ingold et Prelog)}
+Cette nomenclature est plus générale que la nomenclature Cis-Trans, elle est valable aussi aux alcènes tri et tétra subsitutés. Elle repose sur la règle CIP (Cahn-Ingold-Prelog). Les règles séquentielles proposées par R. S. Cahn, C. Ingold et V. Prelog établissent un ordre conventionnel des atomes ou des groupes d'atomes, dans le but de dénommer sans ambiguïté les configurations absolues ou relatives des stéréo-isomères. C'est en 1966, lors de la conférence de Buerguenstock en Suisse, que Cahn, Ingold et Prelog s'engagèrent à utiliser les règles qui portent leurs noms dans tous les articles scientifiques traitant de stéréochimie.
+\begin{description}
+    \item[Règle 1 :] Un atome de numéro atomique plus élevé a la priorité sur un atome de numéro atomique plus faible.
+    \item[Règle 2 :] Lorsque deux atomes, directement liés à l'atome central (atomes dits de premier rang) ont la même priorité, on passe aux atomes qui leurs sont liés (atomes dits de second rang) et ainsi de suite jusqu'à ce qu'on observe une différence.
+    \item[Règle 3 :] Une liaison multiple est traitée comme autant de liaisons simples, ce qui amène à créer des atomes appelés répliques. S’il est nécessaire de développer au rang suivant, les répliques sont considérées comme étant liées à trois atomes fantômes notés par des points noirs et considérés comme des atomes de priorité la plus basse possible. 
+    \item[Règle 4 :] Quand deux atomes sont isotopes celui dont la masse est la plus élevée est prioritaire sur l'autre.
+\end{description}
+On va prendre quelques exemples: Il faut classer à chaque fois de gauche à droite les groupements suivants suivant la règle de la CIP
+\begin{figure}[!h]
+    \centering
+    \includegraphics{cip1.PNG}
+    \caption{Exemples d'utilisation de la CIP}
+    \label{fig:my_label}
+\end{figure}
+
+Et la solution est la suivante :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{cip2.PNG}
+    \caption{Solution des exemples pour l'utilisation de la CIP}
+    \label{fig:my_label}
+\end{figure}
+
+Pour expliciter la règle 3 :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{fantome.PNG}
+    \caption{Règle 3 de la CIP}
+    \label{fig:my_label}
+\end{figure}
+
+Alors pour la nomenclature Z-E :
+\begin{itemize}
+    \item On a une configuration Z si les deux substituants classés premiers par la règle de CIP portés par les deux carbones de la liaison double sont du même coté de cette liaison.
+    \item On a une configuration E si les deux subsituants classés premiers par la règle de CIP portés par les deux carbones de la double liaison sont de cotés opposés de cette double liaison.
+\end{itemize}
+Par exemple :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.7]{Z_E.png}
+    \caption{Nomenclature Z et E}
+    \label{fig:my_label}
+\end{figure}
+
+\subsubsection{Remarque importante}
+Dans une molécule on peut avoir plusieurs paires de carbones présentants les conditions pour l'isomérie géométrique, alors le nombre d'isomères géométriques que présente cette molécule est égal à $2^n$ tels que n est le nombre de doubles liaisons reliants les carbones qui présentent les conditions d'isomérie géométrique.
+\subsection{Cas des cycles}
+Un cyclane dont les 2 carbones sont substitués peut présenter deux isomères cyclaniques ou géométriques par rapport au plan du cycle.
+
+La configuration est Cis si les deux substituants sont du même côté du plan, il est Trans si les deux subsituants sont de côtés opposés. Par exemple :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{cyclecis.PNG}
+    \includegraphics[scale=0.3]{cyclecis2.PNG}
+    \caption{Nomenclature Cis-Trans dans les cycles}
+    \label{fig:my_label}
+\end{figure}
+\subsection{Isomérie optique (\'Enantiomérie)}
+L'énantiomérie est la relation qui existe entre une molécule et son image dans un miroire lorsque cette image ne lui est pas superposable. De manière générale on peut dire qu'une molécule ayant n carbones asymétriques $C^*$ possède $2^n$ configurations différentes et donc $2^n$ stéréo-isomères optiques (pas forcément actif optiquement).
+\subsubsection{Chiralité}
+Si une molécule ne présente \textbf{aucun élément (plan ou centre) de symétrie} alors elle peut exister sous, au moins, deux configurations différentes non superposables et symétriques l'une par rapport à l'autre dans un miroir, cette molécule est dite \textbf{chirale} (main en grec), les deux configurations s'appellent énantiomères ou isomères optiques, la cause la plus courante de ces isomères sont les carbones asymétriques $C^*$ .
+
+Pour qu'une structure soit chirale, elle doit être dissymétrique, c'est à dire qu'elle ne doit pas posséder certains éléments de symétrie, mais pas nécessairement asymétrique ce qui signifierait une absence totale de symétrie. D'une façon plus précise, la chiralité implique l'absence :\\
+\begin{itemize}
+    \item De plan de symétrie.
+    \item De centre de symétrie.
+\end{itemize}
+
+Pour un peu d'histoire, ce terme a été introduit par Lord Kelvin en 1904 dans son livre : Baltimore Lectures on Molecular Dynamics and the Wave Theory of Light : "I call any geometrical figure, or group of points, chiral, and say it has chirality, if its image in a plane mirror, ideally realized, cannot be brought to coincide with itself."
+\subsubsection{Mélange racémique}
+Un mélange racémique est un mélange équimolaire de deux énantiomères qui sont optiquement actif, le mélange est donc optiquement inactif (les activités optiques s'annulent).
+\subsubsection{Activité optique}
+Sans aller dans les détails de l'activité optique d'un composé, il faut savoir qu'une molécule dite chirale possède la propriété d'être optiquement active, cette propriété s'appelle le pouvoir rotatoire, soit quand la molécule est traversée par un faisseau de lumière polariséé plane elle provoque une déviation d'un angle $\alpha$ du plan de polarisation de cette lumière.
+
+Ce pouvoir rotatoire est la seule propriété qui permet de différencier les deux énantiomères d'une substance chirale, \textbf{leurs pouvoirs rotatoires est identiques en valeur absolue et opposés en signe.}
+
+Alors on peut ainsi apporter la première nomenclature qu'on utilisera pour les énantiomères qui est la nomenclature d,l (dextrogyre, levogyre).
+\subsubsection{Nomenclature d,l}
+\begin{itemize}
+    \item L'énantiomère est dit dextrogyre (isomère droit (d) (+)) s'il dévie le plan de la lumière polarisée dans le sens de l'aiguille d'une montre ($\alpha > 0$).
+    \item L'énantiomère est dir levogyre (isomère gauche (l) (-)) s'il dévie le plan de la lumière polarisée dans le sens contraire des aiguilles d'une montre ($\alpha < 0$).
+\end{itemize}
+Pour illustrer cela voila une image :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{dextrogyre.jpg}
+    \caption{Influence d'un énantiomère sur une lumière polarisée}
+    \label{fig:my_label}
+\end{figure}
+
+L'angle $\alpha$ peut être calculé avec une loi très simple, \textbf{la loi de Biot} :
+\[
+    \alpha=[\alpha]_\lambda^T \cdot l \cdot c
+\]
+tels que :
+\begin{itemize}
+    \item \textbf{$[\alpha]_\lambda^T$ :} Pouvoir rotatoire défini pour une longueur d'onde donnée et à une température donnée pour le solvant étudié.
+    \item \textbf{l : }Longueur de la cellule du polarimètre (dm).
+    \item \textbf{c : }Concentration de la substance active (g.$cm^{-3}$).
+\end{itemize}
+Voilà un exemple :
+\begin{figure}[!h]
+    \centering
+    \includegraphics{d_l.PNG}
+    \caption{Exemple de nomenclature d,l}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\subsubsection{Configuration relative d'un $C^*$ (Nomenclature D, L de Fischer)}
+Cette nomenclature est utilisée dans la série des sucres (oses) et des acides aminés et fait référence au glycèraldéhyde dont le groupement -OH est représenté à droite dans la projection de Fischer donc par référence au D-glyèrealdéhyde tout composé de la famille des sucres appartient à :
+\begin{itemize}
+    \item La série D si le $C^*$ d'indice le plus élevé porte le -OH à droite dans la représentation de Fischer.
+    \item La série L si le $C^*$ d'indice le plus élevé porte le -OH à gauche dans la représentation de Fischer.
+\end{itemize}
+On procèdera de la même façon avec les acides aminés en considérant les groupements $-NH_2$.
+Prenons quelques exemples : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{DL_3.jpg}
+    \includegraphics[scale=0.2]{DL_2.png}
+    \includegraphics[scale=0.7]{DL_1.png}
+    \caption{Exemples de nomenclature D,L}
+    \label{fig:my_label}
+\end{figure}\\
+\textbf{Note :} \`A ne pas confonde avec la nomenclature d,l précédemment expliquée, il n y a pas de relation directe entre les deux.
+\subsubsection{Configuration absolue d'un $C^*$ (Nomenclature R et S)}
+On appelle configuration absolue, la disposition spatiale des atomes ou des groupes d'atomes d'une entité moléculaire chirale ou d'un groupe chiral qui distingue cette entité ou ce groupe de ses isomères optiques.
+
+La configuration R et S est déterminée grâce à la règle séquentielle de Cahn, Ingold et Prelog qui permet de classer les substituants d'un atome de carbone par ordre de priorité.
+
+En présence d'un carbone asymétrique, les 4 substituants a, b, c, d sont classés du plus important au moins important. Ensuite, il faut se placer dans l'axe de la liaison C - dernier substituant (le substituant $n^o4$ étant dirigé vers l’arrière) et regarder le sens de rotation de la molécule en suivant l'ordre a - b - c.
+Si le passage a-b-c tourne dans le sens de l'aiguille d'une montre, la configuration est R (Rectus), si c'est dans le sens contraire de l'aiguille d'une montre la configuration est S (Sinister).
+
+On va prendre quelques exemples pour illustrer cette définition:
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.7]{RS_0.PNG}
+    \includegraphics[scale = 0.7]{RS_1.PNG}
+    \includegraphics[scale = 0.8]{RS_2.PNG}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.7]{RS_3.PNG}
+    \caption{Exemples de la nomenclature R,S}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\subsubsection{Diastéréo-isomères}
+La diastéréoisomérie est une stéréoisomérie de configuration qui n'est pas énantiomérique.
+
+Les diastéréoisomères sont des molécules qui ont le même enchaînement d'atomes, mais qui ne sont ni superposables, ni image l'une de l'autre dans un miroir.
+\subsubsection{Configurations absolues de 2 $C^*$}
+Avec deux carbones asymétriques on a alors $2^2=4$ isomères optiques et donc 2 couples d'énantiomères. Alors on aura aussi des isomères \textbf{MAIS} qui ne sont pas l'image de l'une de l'autre dans un miroire et ces couples là sont des couples de diastéréo-isomères tels que, par exemple :
+\begin{center}
+    \includegraphics[]{dias_1.PNG}
+\end{center}
+tels que :
+\begin{description}
+    \item[E :] Représente une relation d'énantiomérie.
+    \item[D :] Représente une relation de diastéréo-isomérie.
+\end{description}
+Comme dans ce cas on a deux carbones asymétriques portant des radicaux différents donc on a réellement 4 stéréo-isomères optiques qu'on peut séparés.
+\paragraph{Cas de 2 $C^*$ identiques : }
+La molécule présente alors un élément de symétrie, par conséquent il existe 3 isomères optique, une paire d'énantiomères optiquement actifs séparement et un isomère optiquement inactif dû au plan de symétrie qu'on appelera \textbf{forme Méso}. 
+
+Méso désigne un composé ayant 2 carbones asymétriques portant les mêmes constituants. Si l'un des carbones est en S et l'autre R, il devient impossible de dire si l'on a la forme R,S ou S,R d'où le nom de méso. La forme méso n'est pas active optiquement. Par exemple :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{meso.PNG}
+    \caption{Exemple de forme méso}
+    \label{fig:my_label}
+\end{figure}
+
+On voit clairement le plan de symétrie rendant la molécule non chirale et par conséquent non optiquement active.
+\subsubsection{Nomenclature Thréo-Erythro}
+Elle est utilisée dans le cas des stéréoisomères qui présentent deux $C^*$ adjacents, elle permet de localiser rapidement un couple d'énantiomères par \textbf{la configurations relatives} des deux $C^*$, reliés au minimum à deux couples de substituants identiques.
+
+Deux carbones asymétriques adjacents ayant la même configuration absolue, R ou S, forment un couple érythro, tandis qu'ils forment un couple thréo si leurs configurations absolues sont opposées. Les termes érythro et thréo dérivent des noms communs de deux aldotétroses naturels, le D-(-)-érythrose et le D-(-)-thréose, possédant deux carbones asymétriques adjacents.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{threoerythro.PNG}
+    \caption{Thréose et erythrose}
+    \label{fig:my_label}
+\end{figure}
+
+On peut le définir autrement aussi, tels que :
+\begin{itemize}
+    \item L'énantiomère a la configuration erythro si les substituants identiques des deux $C^*$ adjacents sont du même coté de la projection de Fischer (au sens large si les deux substituants classés prioritaires sont du même côté).
+    \item L'énantiomère a la configuration thréo si les substituants identiques des deux $C^*$ adjacents sont de cotés differences de la projection de Fischer (au sens large si les deux substituants classés prioritaires sont de côtés différents).
+\end{itemize}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.7]{threo_0.PNG}
+    \caption{Définition de la nomenclature thréo-erythro}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+On peut prendre cette exemple pour illustrer cette nomenclature :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{threo_1.PNG}
+    \caption{Exemple d'utilisation de la nomenclature thréo-erythro}
+    \label{fig:my_label}
+\end{figure}
+\subsubsection{Cas particuliers}
+Cela reste hors programme mais il faut savoir qu'il existe certains composés qui présentent une activité optique sans pourtant posséder de carbones asymétriques, ces molécules sont généralement formés d'atomes disposés dans deux plans perpendiculaires bloqués dans leurs rotations par des doubles liaisons adjacentes ou un encombrement stériques. On peut prendre par exemples : les isomères allénique, les isomères spiraniques, les isomères biphéniliques...
+\part{Effets électroniques}
+\begin{quotation}
+\vspace*{7cm}
+\LARGE{“Il y a intéraction entre langage et pensée. Un langage organisé agit sur l'organisation de la pensée, et une pensée organisée agit sur l'organisation du langage.”\\
+\begin{center}
+    \textbf{Fayd al-khäter, Ahmad Amin}
+\end{center}}
+\end{quotation}
+\chapter{Introduction}
+Les effets électroniques sont une part importante de la chimie organique, principalement dans l'étude de la réactivité des groupes fonctionnels, leurs études permet de prévoir le sens, facilité ainsi que la manière des attaques lors des réactions chimiques. 
+
+La réactivité d'une molécule est liée à sa structure et à ses propriétés électroniques. Un groupement chimique peut exercer des effets de natures différentes sur la répartition de la densité électronique d'une molécule. Il existe différents types d'effets électroniques comme les effets inductifs, mésomères, l'hyperconjugaison... La chimie quantique permet de caractériser les propriétés électroniques des molécules et donc de mieux comprendre ces effets.
+
+Dans ce cours on abordera les effets inductifs causés par la polarité des atomes et les effets mésomères causé par la mobilité des électrons $\pi$
+\chapter{Rappels et définitions}
+\minitoc
+\section{\'Electronégativité}
+En chimie, l'électronégativité d'un atome est une grandeur physique qui caractérise sa capacité à attirer les électrons lors de la formation d'une liaison chimique avec un autre élément. La différence d'électronégativité entre ces deux éléments détermine la nature de la liaison : liaison apolaire lorsque la différence est nulle ou faible, liaison polaire quand la différence est moyenne, et ionique quand la différence est tellement forte qu'un des atomes a attiré complètement, ou presque, les électrons de la liaison. La notion d'électronégativité, qui décrit le comportement des électrons dans une liaison chimique, ne doit pas être confondue avec celle d'affinité électronique qu'on abordera plus tard dans le cours.
+
+L'élément le plus électronégatif du tableau périodique est le Fluor (F), plus un atome s'en éloigne moins il est électronégatif alors : 
+\begin{description}
+    \item L'électronégativité des éléments chimiques d'un même groupe du tableau périodique (c'est-à-dire d'une même colonne du tableau) a tendance à décroître lorsque le numéro atomique croît (le rayon augmente).  
+    \item l'électronégativité des éléments d'une même période du tableau périodique a tendance à croître avec le numéro atomique,
+\end{description}
+
+Le minimum est donc au niveau du bas à gauche du tableau (au niveau du francium) tandis que le maximum se trouve en haut à droite (au niveau du fluor). Voilà le tableau périodique avec l'echelle d'électronéganitivité de Pauling.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{tableau_periodique.PNG}
+    \caption{Tableau périodique avec l'echelle de Pauling}
+    \label{fig:my_label}
+\end{figure}
+\subsection*{NOTE :}
+Par convention on considère l'électronégativité entre le carbone et l'hydrogène comme nulle étant très proches l'une de l'autre (comme vous pouvez l'observer sur le tableau ci-dessus). \textbf{Cette convention sera pris en compte dans le reste du cours.}
+\section{Polarité et polarisation}
+Une liaison covalente simple entre deux atomes est dite polarisée si les deux électrons mis en commun ne sont pas répartis de manière équivalente entre les atomes.
+
+L’un des atomes de la liaison exerce une attraction plus importante sur la paire d’électrons partagée par conséquent la zone dans laquelle ils évoluent est plus proche de ce dernier: statistiquement les électrons ont alors une probabilité plus élevée de se trouver à proximité de l’atome le plus “influent” que de son partenaire.
+
+Cela est dù à l'électronégativité, plus cette valeur est élevée et plus l’attraction est forte : on considère en général qu’une différence d’électronégativité comprise entre 0,4 et 1,7 est associée à une liaison polarisée.
+
+Exemple de liaison polarisée : liaison entre l'hydrogène et le chlore (H-Cl) qu'on peut représenter dans la figure suivante : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{hcl.PNG}
+    \caption{Liaison HCl}
+    \label{fig:my_label}
+\end{figure}
+On voit effectivement que l'atome le plus électronégatif (le chlore) attire bien plus les électrons vers lui que l'atome d'hydrogène moins électronégatif, créant ainsi des charges partielles et un moment dipolaire.
+\section{Nature des liaisons}
+\subsection{Liaisons homonucléaires}
+Les deux atomes qui forment la laison ont des électronégativité voisines ou égales (par exemple des liaisons entre atomes identiques), le doublet électronique se trouve au milieu de la laison.
+
+La rupture d'une telle liaison est dite homolytique, il y a alors partage symétrique du doublet électronique entre les atomes qui forment la liaison ce qui conduit à la formation de radicaux libres.
+
+\subsection{Liaisons hétéronucléaires}
+Les deux atomes qui forment la laison ont des électronégativités différentes, la liaison est polarisée, le doublet électronique est attiré par l'atome le plus électronégatif, il portera une charge partielle $-\delta$, l'autre portera une charge partielle $+\delta$.
+
+La rupture d'une telle liaison est dite hétérolytique, l'atome le plus électronégatif prendra les deux électrons partagés devenant un anion (ion négatif), et l'autre par conséquent devenant un cation (ion positif) 
+
+On peut ainsi représenter ces deux liaisons avec le schéma suivant :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=1.5]{homolytique_heterolytique.png}
+    \caption{Représentation des liaisons homolytiques et hétérolytiques}
+    \label{fig:my_label}
+\end{figure}
+\chapter{Effet inductif}
+\minitoc
+L'effet de polarisation des liaisons concerne chaque liaison séparément alors que l'effet indusctif est caractéristique de l'enchaînement de plusieurs liaisons simples covalentes $\sigma$.
+
+Au sein d'un composé chimique, l'effet inductif consiste en la propagation d'une polarisation électronique au fil des liaisons chimiques, dû à la différence d'électronégativité des différents éléments liés entre eux. La propagation ne se fait que sur des liaisons $\sigma$, polarisant les liaisons et formant des charges partielles $\delta$.\\
+On pourra alors distinguer deux sortes d'effet inductif :
+\begin{description}
+    \item[Effet inductif donneur :] Si le groupement est moins électronégatif que le H.
+    \item[Effet inductif attracteur :] Si le groupement est plus électronégatif que le H. 
+\end{description}
+\subsubsection*{Note :}
+\begin{itemize}
+    \item Le principe de donneur et d'attracteur est relatif au électrons alors donneur$\equiv$donneur d'électrons et attracteur$\equiv$attracteur d'électrons.
+    \item On rappelle que par convention l'électronégativité de l'hydrogène et celle du carbone sont considérées égales.
+\end{itemize}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.8]{donneur_attracteur_2.png}
+    \caption{Types d'effets inductifs}
+    \label{fig:my_label}
+\end{figure}
+\section{Conventions}
+\begin{itemize}
+    \item Par convention l'effet inductif entre le C et le H est nul.
+    \item L'effet inductif est noté I, il est représenté par une flèche portée par la liaison et dirigée vers l'atome (ou groupement d'atome) le plus électronégatif.
+    \item L'effet inductif attracteur est noté -I.
+    \item L'effet inductif donneur est noté +I.
+\end{itemize}
+\section{Caractéristiques de l'effet inductif}
+L'effet inductif a des particularité et diffère de groupement d'atome à un autre. On peut citer 3 caractéristiques principales:
+\begin{description}
+    \item[L'additivité :] L'effet inductif est effectivement additif alors plusieurs groupements ayant le meme effet inductif (attracteur ou donneur) leurs effets s'ajoutent. \textbf{On n'ajoute que des effets de même nature : donneur avec donneur et attracteur avec attracteur}.
+    \item[La distance :] La distance joue un rôle important dans l'action de l'effet inductif, plus le groupement inducteur et loin du groupement étudié moins il aura d'effet, l'effet faiblie à chaque liaison (devient pratiquement nul à partir de 3 à 4 liaisons $\sigma$).
+    \item[Le classement :] Il y a un certains nombre d'atomes et groupements d'atomes ayant des caractéristiques inductives, mais tout dépend de l'électronégativité du dit groupement, donc d'un composé à un autre la force de son effet inductif varie.
+\end{description}
+\section{Classement des effets inductifs}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{classement.png}
+    \caption{Classement des effets inductifs}
+    \label{fig:my_label}
+\end{figure}
+\section{Effet inductif donneur}
+Les groupements ayant un effet inductif donneur sont principalements les métaux (Na, Mg,...), les groupes alkyles ($CH_3, C_2H_5,(CH_3)_3C...)$ , ayant une électronégativité inférieure à celle de l'hydrogène. On peut observer un cas d'addivité pour le cas d'effet inductif donneur : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{additivite_donneur.PNG}
+    \caption{Additivité des effets inductifs donneurs}
+    \label{fig:my_label}
+\end{figure}
+\section{Effet inductif attracteur}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{attracteur_1.PNG}
+    \caption{Effet inductif attracteur}
+    \label{fig:my_label}
+\end{figure}
+Ce sont des atomes ou groupements d'atomes ayant une électronégativité supérieure à celle du carbone ou de l'hydrogène, on peut citer parmis eux : les halogènes, $NO_2$...
+
+Le principe de classement entre les halogène reste de vigueur le fluor (F) (élément le plus électronégatif du tableau périodique) à un effet inductif attracteur supérieur à celui du Chlore (Cl) par exemple. Aussi pour l'additivité on peut prendre un exemple, l’effet de 2 atomes de chlore sera deux fois plus important que celui d’un seul.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{attracteur_2.PNG}
+    \caption{Additivité des effets inductifs attracteurs}
+    \label{fig:my_label}
+\end{figure}
+\section{Conséquences et applications}
+L'effet inductif polarise les liaisons voisines, il se transmet le long de la chaîne carbonnée en s'affaiblissant et s'annule au delà de la 3\textsuperscript{ème} liaison simple C-C.
+
+Alors il y a surtout 2 grandes applications qui découlent de cet effet inductif: 
+\begin{itemize}
+    \item Stabilité des carbocations et carbo-anions.
+    \item Force des acides et des bases.
+\end{itemize}
+\subsection{Stabilité des carbocations et des carbo-anions}
+\paragraph{Carbocation (C$^+$)}
+
+Un carbocation (comme éxpliqué précédemment dans le cours) est un carbone C$^+$ doté d'une charge positive et par conséquent d'un déficit électronique, alors un effet inductif donneur approtera une stabilité à ce carbocation en lui fournissant une charge partielle renforçant partiellement sa stabilité. Par contre un effet attracteur renforcera le déficit électronique et destabilisera encore plus le carbocation.
+\paragraph{Carbo-anion (C$^-$)}
+
+Un carbo-anion quant à lui est un carbone doté d'une charge négative (C$^-$) et donc d'un surplu électronique, ce surplu pourrait être compensé partiellement par un effet inductif attracteur qui prendra une partie de la charge se qui stabilisera le carbo-anion. Par contre avec un effet inductif donneur le surplu électronique augmentera et par conséquent la stabilité diminuera. 
+\subsection{Force des acides}
+La force d'un acide (cela s'applique aux acides carboxyliques et aux alcools) se calcule par rapport à la facilité de céder un proton H$^+$, soit : plus le composé aura de la facilité à céder son hydrogène (en forme de proton) plus son acidité sera grande. 
+
+Quant à l'effet inductif par rapport à son impact sur l'acidité d'un composé tels que : 
+\begin{itemize}
+    \item Un effet inductif attracteur renforce l'acidité (l'augmente).
+    \item Un effet inductif donneur affaiblie l'acidité (la fait diminuer).
+\end{itemize}
+\subsubsection{Explications}
+\paragraph{Effet inductif attracteur}
+Il renforce l'acidité du composé car étant donné que l'effet est donc attracteur, il va donc attirer un surplus électronique qui se répercutera sur la liaison O-H au niveau de la fonction acide -COOH (ou bien alcool O-H), qui la polarisera et donc la fragilisera, facilitant alors le départ de l'hydrogène en forme de proton et donc augmentera l'acidité du composé.
+\paragraph{Effet inductif donneur}
+La logique se fera par l'inverse, étant donné que c'est un effet donneur ca incitera alors à plutôt renforcer la liaison O-H et par conséquencer rendre plus difficile le départ de l'hydrogène ce qui conduira donc à la diminution de son acidité.
+
+On va illustrer cela à travers l'exemple suivant :
+\begin{center}
+    \includegraphics[]{inductif_acide.jpg}
+\end{center}
+\subsection{Force des bases}
+Les bases rencontrées dans ce chapitre sont principalement les amines (avec la fonction -NH$_2$), tels que la force d'une base réside au fait d'attirer et de garder un proton H$^+$ en plus dans sa constitution (donc acquérir une fonction -NH$_3^+$). On peut aussi dire qu'une base est forte quand son acide conjugué est stable, soit doté du proton supplémentaire c'est un composé stable. Sachant cela et vu que la fonction est positive et donc en recherche d'un apport électronique, un effet inductif donneur renforcera la base en y donnant une fraction de charge ce qui stabilisera l'ensemble renforcant sa basicité, par contre un effet attracteur par sa définition attirera encore plus de charge ce qui destabilisera la structure et par conséquent diminuera de la basicité du composé.
+
+\textbf{Note :} La force des bases sera abordée surtout avec l'effet mésomère, plus tard dans le cours.
+\chapter{Effet mésomère}
+\minitoc
+Il décrit l'influence des substituants qui présentent des doublets $\pi$ ou des doublets libres sur un système $\pi$, Il y a alors délocalisation de la conjugaison sur l'ensemble du système, il est symbolisé par M.
+\section{Système $\pi$ ou système conjugué}
+Un système conjugué est un système chimique constitué d'atomes liés par des liaisons covalentes avec au moins une liaison $\pi$ délocalisée. Cette délocalisation permet d'envisager plusieurs représentations de Lewis (appelées formes mésomères, résonantes ou canoniques) mettant ainsi en évidence les propriétés chimiques de la molécule.
+
+Dans ce chapitre on va parler d'un seul type de système conjugué qui est le système alterné $\pi-\sigma-\pi$ : il s'agit d'une « alternance » de liaisons simples et multiples (c'est-à-dire double ou triple, comme C=C-C=C-C) dans une molécule ou un matériau. L'exemple le plus simple de la conjugaison $\pi-\sigma-\pi$ est le buta-1,3-diène, représenté ci-dessous.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.3]{butadiene.png}
+    \caption{Exemple de système conjugué}
+    \label{fig:my_label}
+\end{figure}
+
+La molécule est alors représentée par un ensemble de plusieurs formules (au moins 2) différentes les une des autres par la localisation des liaison $\pi$, ces formules sont appelés \textbf{formes limites} ou formes mésomères et la molécule est un \textbf{hybride de résonnance} qui résulte de la contribution de toutes ces fomes mésomère possibles d'énérgies différentes. Pour reprendre l'exemple précédent voila les formes mésomères possibles :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{forme_mesomere_1.PNG}
+    \caption{Formes limites du buta-1,3-diène}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+L'ensemble des formes limites amènent à l'écriture de la forme de résonnance (ou structure de résonnance) tels que c'est la somme de chaque forme limite :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.8]{forme_resonnance.png}
+    \caption{Exemple de forme de résonnance}
+    \label{fig:my_label}
+\end{figure}
+\subsection*{Note :}
+Lorsque l'on écrit des formes limites mésomères, il faut toujours respecter la charge de la molécule. Pour une molécule de départ, qui est neutre, toutes les formes mésomères doivent être globalement neutre (autant de charges positives que de charges négatives).
+\subsection*{Remarque}
+Pour un compose donné, plus le nombre de formules mésomères est élevé, plus la stabilité est grande. 
+\section{Classement des effets mésomères}
+Il faut savoir que les effets mésomères ne dépendent pas de l'atome (ou groupement d'atomes) mais de la nature de la liaison avec laquelle il est relié, un même atome (prenons l'exemple de l'oxygène) peut présenter un effet mésomère donneur dans certains cas et un effet mésomère attracteur dans d'autre. On peut représenter cela comme suit: 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{mesomere_donneur_attracteur.png}
+    \caption{Détermination de l'effet mésomère d'un composé}
+    \label{fig:my_label}
+\end{figure}
+
+On voit bien que si l'oxyègene est suivi d'une double liaison il aura un effet attracteur et s'il est suivis d'une liaison simple un effet donneur. On peut aussi dresser cette table :
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c c c|c c c|}
+        \hline
+        \multicolumn{3}{|c|}{Donneur +M} & \multicolumn{3}{c|}{Attracteur -M} \\
+        \hline
+        O$^-$ & S$^-$ & NR$_2$ & NO$_2$ & CHO & CN \\
+        NHR & NH$_2$ & NHCOR & COR & CO$_2$H & SO$_2$R \\
+        OR & OH & OCOR & CO$_2$R & SO$_2$OR & CONH$_2$\\
+        SR & SH & Br & NO & CONHR & Ar\\
+        I & Cl & F & CONR$_2$ & & \\
+        R & Ar & & & & \\
+        \hline
+    \end{tabular}
+    \caption{Effets mésomères des principaux radicaux étudiés}
+    \label{tab:my_label}
+\end{table}
+
+Si on fait un classement, l'effet mésomère attracteur augmente avec l'électronégativité du groupement, et l'effet mésomère donneur quant à lui diminue avec l'électronégativité.
+\section{Effet mésomère attracteur (-M)}
+Il concerne les groupements qui recoivent les e$^-$ et désactivent les liaisons en créant une charge positive sur l'atome de carbone doublement lié terminal (de l'autre coté de la chaîne).
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=5]{mesomere_attracteur_1.png}
+    \includegraphics[]{mesomere_attracteur_2.png}
+    \caption{Exemple d'effets mésomères attracteurs}
+    \label{fig:my_label}
+\end{figure}
+
+Si le système $\pi$ se prolonge alors les formes limites augmentent alors la charge positive se délocalisera sur le reste des carbones de la molécule :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{mesomere_attracteur_3.png}
+    \caption{Formes limites impliquants un effet mésomère attracteur}
+    \label{fig:my_label}
+\end{figure}
+\section{Effet mésomère donneur (+M)}
+Il caractérise les groupements qui cèdent les e$^-$ et activent les doubles liaisons en créant une charge négative sur l'atome de carbone doublement lié terminal.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{mesomere_donneur_1.PNG}
+    \caption{Exemple d'effet mésomère donneur}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+Le même principe de propagation arrive avec cet effet donneur :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{mesomere_donneur_2.PNG}
+    \caption{Exemple d'effet mésomère donneur dans le cycle benzène}
+    \label{fig:my_label}
+\end{figure}
+\subsection*{Remarque importante}
+Dans une molécule où on a des effets inductifs et des effets mésomères, dans la majorité des cas, à effet équivalent (comparaison +I, +M ou bien -I, -M), l'effet mésomère l'emporte, faisant intervenir une charge totale alors que l'effet inductif ne fait intervenir qu'une charge partielle s'amenuisant au bout d'un certain nombre de liaisons simples sigma alors que l'effet mésomère peut poursuivre tout le long du système $\pi$ aussi long qu'il soit (en dehors de ce système conjugué on ne peut plus parler d'effet mésomère).
+\section{Conséquences de l'effet mésomère}
+\subsection{Stabilité des carbocations et carbo-anions}
+Le même raisonnement peut avoir lieu dans cette partie que dans la partie de l'effet inductif, la charge de ces atomes pourra être délocalisée sur tout le système $\pi$  ce qui stabilisera l'ensemble.
+\subsection{Force des acides}
+La force d'un acide, comme dit précédemment, se vaut par rapport à la facilité de céder un proton H$^+$, et donc de la stabilité de sa base conjuguée. Alors on peut voir qu'un effet mésomère attracteur stabilisera la base conjuguée et par conséquent renforcera l'acide, prenons l'exemple en comparaison du cyclohexanol et du phénol.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.1]{cyclohexanol.png}
+    \hspace{5cm}
+    \includegraphics[scale=0.05]{phenol.png}
+    \caption{Le cyclohexanol et le phénol}
+    \label{fig:my_label}
+\end{figure}
+
+Qui ont tout deux, avec la fonction alcool qu'ils ont, un comportement acide, mais on peut voir que la base conjugué du phénol est plus stable car la charge négative portée sur l'oxygène est délocalisé dans le système $\pi$ (du benzène), et donc le phénol est plus acide que le cyclohexanol.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{acide_cyclohexanol.png}
+    \caption{Base conjuguée du cyclohexanol}
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{phenol_acide.PNG}
+    \caption{Formes limites de la base conjuguée du phénol}
+    \label{fig:my_label}
+\end{figure}
+\subsection{Force des bases}
+La force d'une base se vaut quant à elle à la facilité de capter un proton H$^+$ de son environnement, dans ce chapitre on va principalement aborder les bases sous forme amine, qui ont une fonction -NH$_2$ avec l'azote qui a un doublet libre qui servira justement à intercepter le proton, on voit facilement que l'effet mésomère va diminuer la basicité car cet effet va délocaliser ce doublet libre rendant difficile la captation d'un proton de sa part, pour cela on va aborder l'exemple en comparant l'aniline et cyclohexanamine
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.145]{cyclohexanamine.png}
+    \includegraphics[scale=0.7]{aniline.jpg}
+    \caption{Le cyclohexanamine et l'aniline}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+On peut voir l'effet mésomère sur l'aniline tels que :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{mesomere_base_donneur.jpg}
+    \caption{Formes limites de l'aniline}
+    \label{fig:my_label}
+\end{figure}
+
+Ainsi comme dit précédemment le doublet libre de la fonction amine sera délocalisé et par conséquent il ne sera pas "tout le temps" disponible pour l'interception d'un proton H$^+$ et par conséquent diminuera de la force de la base.
+\section{Tableau récapitulatif des effets électroniques par rapport aux fonctions}
+J'aimerai remettre ce tableau qui cite un ensemble de fonctions courantes en chimie organique et leur effet électronique donneur ou attracteur.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c c c|c c c|}
+        \hline
+        \multicolumn{3}{|c|}{Donneur +M} & \multicolumn{3}{c|}{Attracteur -M} \\
+        \hline
+        O$^-$ & S$^-$ & NR$_2$ & NO$_2$ & CHO & CN \\
+        NHR & NH$_2$ & NHCOR & COR & CO$_2$H & SO$_2$R \\
+        OR & OH & OCOR & CO$_2$R & SO$_2$OR & CONH$_2$\\
+        SR & SH & Br & NO & CONHR & Ar\\
+        I & Cl & F & CONR$_2$ & & \\
+        R & Ar & & & & \\
+        \hline
+    \end{tabular}
+    \caption{Effets mésomères des principaux radicaux étudiés}
+    \label{tab:my_label}
+\end{table}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c c c|}
+        \hline
+        Donneur +I & \multicolumn{3}{|c|}{Attracteur -I} \\
+        \hline
+        O$^-$ & NR$_3^+$ & COOH & OR \\
+        COO$^-$ & NR$_2^+$ & F & COR \\
+        CR$_3$ & NH$_3^+$ & Cl & SH \\
+        CHR$_2$ & NO$_2$ & Br & SR \\
+        CH$_2$R & SO$_2$R & I & OH \\
+        CH$_3$ & CN & OAr & Ar \\
+        D & SO$_2$Ar & COOR &  \\
+        \hline
+    \end{tabular}
+    \caption{Effets inductifs des principaux radicaux étudiés}
+    \label{tab:my_label}
+\end{table}
+\newpage
+Ces deux tableaux n'ont pas pour vocation d'être appris, c'est plus des repères pour confirmer sur des radicaux qu'on n'a jamais vu avant ou pour consolider ces acquis, avec un certain nombre d'exercices la détermination de l'effet inductif ou mésomère d'un radical devient chose aisée.
+\part{Mécanismes réactionnels}
+\begin{quotation}
+\vspace*{7cm}
+\LARGE{"Rien ne se crée, ni dans les opérations de l’art, ni dans celles de la nature, et l’on peut poser en principe que, dans toute opération, il y a une égale quantité de matière avant et après l’opération ; que la qualité et la quantité des principes est la même, et qu’il n’y a que des changements, des modifications"\\
+\begin{center}
+    \textbf{Antoine Laurent de Lavoisier.}
+\end{center}}
+\end{quotation}
+\chapter{Introduction}
+\minitoc
+\section{Introduction}
+L'étude des réactions chimiques a été la préoccupation de bon nombre de grands chimistes tant l'importance de cette dernière est grande dans l'utilisation de certains composés dans des domaines riches et variés. Des pionniers de cette problématique comme Nevil Vincent Sidgwick (1873-1952), Arthur Michael (1853-1942) et Arthur Lapworth (1872-1941) se basèrent sur la thermodynamique et sur des mesures cinétiques et commencèrent à se poser la question des étapes successives dans les réactions. 
+
+On va aborder alors dans cette section une partie de cette discipline en abordant 3 types de réactions : les substitutions, les additions et les éliminations. 
+\subsection*{Remarque}
+Différentes réactions peuvent se succéder par exemple le produit d'une substituant peut être le substrat d'une élimination ou addition.
+\section{Réactions de substitutions}
+C'est une réaction durant laquelle un atome ou groupement d'atomes est remplacé par un autre atome ou groupement d'atomes, par exemple :
+\[
+    CH_3-CH_2Cl + H_2O \Longrightarrow CH_2-CH_2OH + HCl
+\]
+\section{Réactions d'éliminations}
+C'est une réaction durant laquelle 2 atomes ou groupes d'atomes sont éliminés, en formant une double liaison au sein de la molécule mère, par exemple :
+\[
+    CH_3-CH_2OH \Longrightarrow CH_2=CH_2 + H_2O 
+\]
+\section{Réactions d'additions}
+C'est une réaction qui se fait sur des molécules insaturées, en y ajoutant deux fragements provenant d'une autre molécule, par exemple : 
+\[
+    CH_2=CH_2 + Cl_2 \Longrightarrow CH_2Cl-CH_2-Cl
+\]
+\section{Types de mécanismes réactionnels}
+\begin{itemize}
+    \item[Mécanisme radicalaire : ] Où une rupture homolytique se produit produisant des radicaux libres. Ce mécanisme est caractérisé par des réaction en chaîne souvent autocatalytique (qui se catalyse lui même / pas besoin de catalyseur).
+    \item[Mécanisme ionique : ] Qui font intervenir des intéractions entre anions et cathions.
+\end{itemize}
+\section{Intermédiaires réactionnels}
+\subsection{Radicaux libres}
+Ce sont des atomes ou groupements d'atomes porteurs habituellement neutres, ils sont obtenus par rupture d'une liaison homolytique covalente (par effet de chaleur, de lumière, ou de péroxydes), ils sont hybridés sp$^2$ et leur géométrie est plane.
+\subsection{Carbo-cathions}
+C'est des carbones portant une charge positive (+) (cathions), ils sont obtenus par une rupture hétérolytique d'une liaison covalente ou par addition d'un proton à un alcène (ou très rarement à un alcyne), ils sont hybridé sp$^2$, leur structure est plane, ils sont stabilisés par les effets donneurs (inductif et mésomère).
+\subsection{Carbo-anions}
+Ce sont des carbones portant une charges négative (-) (anions), ils sont aussi obtenus par rupture d'une liaison hétérolytique d'une lisaison covalente, ou par arrachement d'un H par une base, ils sont hybridé sp$^3$ et donc leur structure est tétraédrique, ils sont stabilisés par effets attracteurs (inductif et mésomère).
+\section{Les réactifs}
+\subsection{Réactifs nucléophiles}
+Ce sont des entités riches en électrons, ils recherchent des points de densités électroniques faibles, ce sont généralement \textbf{des groupes anioniques} ( OH$^-$, Cl$^-$ ...) ou \textbf{des porteurs de doublets libres}.
+\subsection{Réactifs électrophiles}
+Ce sont des entités pauvres en électrons, ils recherchent des points de densités électroniques élevés, ce sont généralement \textbf{des groupes cathioniques} ou \textbf{des groupes porteurs d'une case vide}.
+\subsection*{Remarque}
+On va voir à travers ce chapitre que la nature de la réaction réside dans la nature du réactif on dira alors qu'un mécanisme est nucléophile si le réactif est nucléophile
+\chapter{Réactions de substitutions}
+\minitoc
+\section{Substitution nucléophile (SN)}
+Elle est propre aux dérivés halogénés (contenant un halogène) et les alcools (composés avec une fonction -OH) et se fait selon le mécanisme ionique suivant (équation chimique) : cet exemple est fait avec un halogène X mais il peut être remplacé par un -OH.
+\[
+    Z^- + R-X \longrightarrow Z-R + X^-
+\]
+tels que :
+\begin{description}
+    \item[$ Z^-$ :] Réactif nucléophile
+    \item[$R-X$ :] Substrat
+    \item[$Z-R$ :] Produit
+    \item[$X^-$ :] Nucléophuge
+\end{description}
+Les réactions se font en phase liquide, le solvant dissous le réactif et le substrat, il inhibe (affaibli) ou renforce la polarisation des liaisons, on peut discerner deux sortes de réactions de substitution nucléophile : SN1 et SN2
+\subsection{Substitution nucléophile d'ordre 1 (SN1)}
+On va d'abord voir comment la réaction se fait ensuite on verra comment la reconnaître, quelles sont les caractéristiques qu'elle a, on va prendre un exemple aussi avec un dérivé halogéné mais je rappelle qu'on aura les mêmes étapes de la réaction avec un alcool : 
+
+Alors on a un substrat C-X (le C représente le carbone), dérivé halogéné, et un composé $Z^-$ réactif nucléophile, la réaction se fait en deux étapes :
+\begin{description}
+    \item[\'Etape 1 :] Formation d'un carbocation\\
+    Sous l'effet d'un solvant polaire le substrat s'ionise suivant une réaction \textbf{lente} et donne un \textbf{carbocation}
+    \[
+        C-X \longrightarrow C^+ + X^-
+    \]
+    \item[\'Etape 2 :] Attaque du réactif nucléophile\\
+    Le carbocation formé est \textbf{rapidement} attaqué par le $Z^-$ pour produire le produit final on aura alors :
+    \[
+        Z^- + C^+ \longrightarrow Z-C
+    \]
+\end{description}
+\subsubsection{Aspect cinétique}
+L'aspect cinétique reviendra essentiellement ici par rapport à la vitesse de la réaction globale. La cinétique de la réaction est imposée par l'étape lente, dans notre cas c'est la première étape du processus, dans cette étape le réactif n'influe pas (étant donné que c'est juste le substrat qui intervient), alors la vitesse de la réaction est totalement \textbf{indépendante de la concentration du réactif}, elle ne dépend que de la concentration du substrat, on aura alors une vitesse de ce type:
+\[
+    V = k[substrat] = k[C-X]
+\]
+
+Et c'est pour ca qu'on dit qu'elle est d'ordre 1, la vitesse de dépend que du substrat.
+\subsubsection{Aspect stéréochimique}
+Dans cette partie on parlera essentiellement de la structure stéréochimique du produit (apparition d'un seul stéréo-isomère ou pas spécialement), alors le carbocation \textbf{stable} de structure \textbf{plane} peut être être attaqué des deux côtés du plan avec la même probabilité, si le carbone siège de la réaction est un $C^*$ (ce qui est souvent le cas durant les exercices) le produit obtenu sera un mélange racémique des deux énantiomères possible (faire attention à ce passage le cas de deux $C^*$ est particulier il donnera non pas un mélange de deux énantiomères rendant le mélange racémique et par conséquent inactif optiquement mais un mélange de deux diastéréoisomères qui sera, cette fois ci, actif optiquement), et si le carbone n'est pas asymétrique alors on obtiendra un produit inactif optiquement (si la substitution le rend asymétrique est aussi à considérer mais c'est assez rare).
+
+On dira alors que la SN1 est \textbf{non stéréospécifique}.\\
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{SN1_1.PNG}
+    \caption{Première étape de la SN1}
+    \label{fig:my_label}
+\end{figure}
+
+On voit bien avec cette étape que le carbocation est de structure plane dans l'espace, ensuite on vient bien qu'il est stabilisé par 3 effets donneur, un effet mésomère (+M) dû au phényle (écrit Ph ici), et deux effets inductifs (+I) dûs à l'éthyle (écrit Et ici) et au méthyle, ce qui stabilise énormément le carbocation. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{SN1_2.PNG}
+    \caption{Deuxième étape de la SN1}
+    \label{fig:my_label}
+\end{figure}
+\'Etant donné que le carbocation est plan le réactif nucléophile peut l'attaquer des deux côtés du plan (A et B) et donc résultera à la formation des deux isomères optiques possible (R et S) à concentrations équivalente, ce qui rend le mélange racémique (et donc optiquement inactif).
+\subsubsection{Remarques}
+On peut déjà faire quelques remarques sur la SN1, il faut que le carbocation soit stable et par conséquent qu'il soit tertière, ou bien secondaire stabilisé par effet donneur, et que le produit est optiquement inactif généralement (remarque non valable dans tous les cas je le rappelle). Il y a une autre façon de savoir que c'est une SN1, c'est de savoir quels facteurs influencent la réaction avec par exemple la classe du carbone siège de la réaction.
+\subsubsection{Facteurs qui influencent la SN1}
+\begin{enumerate}
+    \item \textbf{Classe du substrat :} Le carbocation formé doit être stable, la stabilité du carbocation augmente avec la classe du carbone siège, une SN1 est donc favorisé par un $C^+$ tertière ou secondaire pouvant se stabiliser (par effets donneurs).
+    \item \textbf{Nature du réactif :} Le réactif n'a pas d'influence sur la cinétique de la réaction (comme dit dans la partie cinétique de la réaction).
+    \item \textbf{Nature du solvant :} La nature du solvant est extrêmement importante, il renforce la polarisation de la liaison C-X, ce qui induira à sa destruction et formation d'un carbocation, la SN1 est favorisée principalement par des solvants \textbf{protiques polaires} (protique veut dire donneurs de protons) comme : alcool, eau, acide acétique ... qui permettent la solvatation du nucléophile.
+    \item \textbf{Influence d'un catalyseur :} certain ions métalliques tels que : $Ag^{2+}$ ou $Cu^{2+}$ réagissent avec le nucléophuge et facilitent la formation du carbocation (principe d'accélération des réaction chimique vu au semestre précédent en chimie des solutions). 
+\end{enumerate}
+\subsection{Substitution nucléophile d'odre 2 (SN2)}
+On va procéder de la même façon que précédemment, cette substitution se passe en une seule étape, le choc entre le substrat et le réactif est nécessaire pour que la réaction ait lieu, elle est dite concentrée, le passage par un complexe intermédiaire est dû à un début de formation de la liaison Z-C et un début de rupture de la liaison C-X, la fixation du nucléophile et le départ du nucléophuge sont simultanés.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{sn2.png}
+    \caption{Substitution nucléophile d'ordre 2}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+tels que :
+\begin{description}
+    \item[Nu :] Réactif nucléophile.
+\end{description}
+Il faut aussi savoir que le complexe intermédiaire n'est pas une molécule à proprement parlé c'est une forme intermédiaire, et c'est pour ça qu'elle ne respecte pas la règle de l'octet (il y a 5 composés rattachés à un même carbone).
+\subsubsection{Aspect cinétique}
+\'Etant donné qu'il y a une seule étape, l'aspect cinétique ne dépend que d'elle et donc le substrat et le réactif interviennent dans la vitesse de la réaction, et donc la vitesse dépend de deux paramètres et c'est pour ça qu'on dit que c'est un mécanisme réactionnel d'ordre 2.
+\begin{center}
+    V = k.[substrat].[réactif]
+\end{center}
+\subsubsection{Aspect stéréochimique}
+\'Etant donné que le carbone siège de la réaction est hybridé sp3, il y a un encombrement stérique autour de lui, c'est pour ça que le réactif ne peut attquer que dans le côté opposé au nucléophuge (on dira que c'est une attaque anti). Alors on aura une inversion de configuration si le carbone siège de la réaction est un carbone asymétrique (c'est \textbf{l'inversion de Walden}), en clair si on a au début une configuration R on aura dans le produit un S et inversement, et par conséquent le produit est optiquement actif (si y a carbone asymétrique bien sûr), on dira que la réaction est \textbf{stéréospécifique}.\\
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{sn2_1.PNG}
+    \caption{Stéréospécificité de la SN2}
+    \label{fig:my_label}
+\end{figure}
+\newline
+On voit bien que la configuration initiale a été une configuration S, et l'attaque du -CN a été en anti, et le produit final est de configuration absolue R, et donc est optiquement actif. 
+\subsubsection{Remarques}
+On peut voir avec cet exemple quelques caractéristiques de la SN2, tout d'abord et la différence majeure avec la SN1, que le produit est le plus souvent sauf cas rare, optiquement actif vu la stéréospécificité du mécanisme, ensuite on peut remarquer que le carbone siège de la réaction ne donnerait pas un carbocation cation stable, c'est un carbone secondaire ou primaire et non stabilisé (dans cet exemple il est destabilisé par l'effet -I du Br). 
+\subsubsection{Facteurs qui influencent la SN2}
+\begin{enumerate}
+    \item \textbf{Classe du substrat :} Les liaisons partiellement rompues ou formées (dans l'étape intermédiaire) créent un encombrement stérique autour du carbone siège de la réaction qu'il ne peut être facilement attaqué par le nucléophile sauf s'il est moins encombré, alors la SN2 est favorisée par des substrats primaires ou secondaires, sous certaines conditions.
+    \item \textbf{Nature du réactif :} La SN2 au contraire de la SN1, est très sensible à la nature du réactif, la réactivité augmente avec la nucléophilie du réactif.
+    \item \textbf{Nature du solvant :} L'état de transition n'est pas affecté par la nature du solvant, seul le réactif $Z^-$ peut être solvaté, or pour la réaction il doit être \textbf{libre}, la SN2 est donc favorisé par les solvants \textbf{apolaires ou approtiques polaires}.
+\end{enumerate}
+\subsection{Différences entre la SN1 et SN2}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|p{5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
+        \hline
+        \textbf{Mécanisme} & \textbf{Stéréochimie des produits} & \textbf{Cinétique} & \textbf{Substrat} & \textbf{Solvant} & \textbf{Réactif} \\
+        \hline
+        \textbf{SN1} & Deux configurations : => mélange racémique (réaction non stéréospécifique) & Monomoléculaire d'odre 1 V = k.[substrat] & Tertiaire ou secondaire & polaire ou protique polaire & / \\
+        \hline
+        \textbf{SN2} & Une seule configuration (Inversion de Walden) => réaction stéréospécifique & Bimoléculaire d'odre 2 V = k.[substrat].[réactif] & Primaire ou secondaire & Aprotique ou Polaire aprotique & Bon nucléophile\\
+        \hline
+    \end{tabular}
+    \caption{Caractéristiques de la SN1 et de la SN2}
+    \label{tab:my_label}
+\end{table}                     
+\section{Substitution électrophile}
+Cette réaction est caractéristique \textbf{des composés aromatiques}, le benzène avec ses 6 e$^-$ délocalisés sur les 6 atomes de carbones jouent le rôle d'une source d'e$^-$, ils favorisent alors l'attaque par des réactifs électrophiles, généralement \textbf{des ions positifs}, les réactions SE sont catalysées par \textbf{des acides protoniques forts $H_2SO_4$, $HF$, $H_3PO_4$... ou des acides de Lewis : $AlCl_3$, $FeCl_3$... où l'atome de métal présente une lactune électronique} le mécanisme se fait en 4 étapes : (dans cette explication on travaille avec un acide de Lewis car c'est les plus courants dans ce genre de réaction mais le raisonnement est similaire avec un acide fort comme l'acide sulfurique)
+\begin{description}
+    \item[\'Etape 1 :] Formation du réactif électrophile\\
+    En présence un acide Lewis (dont l'atome métalique a une case vide) la molécule E : Z subit une rupture hétérolytique et Z$^-$ échange un doublet avec la molécule de métal :
+    \[
+        E : Z + AlCl_3 \longrightarrow [Z : AlCl_3]^- + E^+
+    \]
+    tels que le E$^+$ est justement le réactif électrophile.
+    \item[\'Etape 2 :] Attaque du réactif E$^+$ et formation d'un carbocation 
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.8]{se_1.PNG}
+        \caption{Deuxième étape d'une SE}
+        \label{fig:my_label}
+    \end{figure}
+    Avec l'attaque du réactif électrophile ca va enlever une insaturation du benzène formant alors un déficit électronique (et par conséquent un carbocation) les intermédiaires de Wheland sont les différentes formes que ca prend pour stabiliser la molécule
+    \item[\'Etape 3 :] Expulsion d'un proton H$^+$
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.8]{se_2.PNG}
+        \caption{Troisième étape d'une SE}
+        \label{fig:my_label}
+    \end{figure}
+    
+    Le cycle formé ne possède alors que 4 électrons $\pi$ délocalisés et son énergie est supérieure à celle du substrat de départ (le benzène) il va alors évoluer vers un état énergitiquement plus stable (donc à énergie plus faible) en éliminant un proton H$^+$ et en rétablissant la symétrie du système $\pi$.
+    \item[\'Etape 4 :] Régénération du catalyseur\\
+    D'après l'équation suivante :
+    \[
+        H^+ + [Z : AlCl_3]^- \longrightarrow AlCl_3 + H : Z
+    \]
+    \'Etant donné que l'acide de Lewis est un catalyseur et non un réactif il doit se régénérer à la fin du mécanisme restant conservé.
+\end{description}
+On pourrait résumer ces étapes dans le schéma suivant :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{se_3.PNG}
+    \caption{Résumé de la substitution électrophile}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\textbf{Exemple 1 :} Cet exemple traitra de la nitration aromatique : mécanisme abordé lors du concours de l'année 2019/2020 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{se_5.png}
+    \caption{\'Etapes de la formation du NO$_2^+$}
+    \label{fig:my_label}
+\end{figure}
+
+La formation du nitronium est bon à connaître mais n'est pas obligatoire
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{se_4.png}
+    \caption{\'Etapes de la nitration du benzène}
+    \label{fig:my_label}
+\end{figure}
+
+Bien sûr cet exemple est légérement différent des étapes présentées précédemment je vous invite à refaire cet exemple sous forme d'exercice pour en assimiler les subtilités.
+\subsection{Orientation de la SE (régioselectivité) :}
+Dans le cas des benzènes non substitués le réactif électrophile peut attaquer indifféremment n'importe lequel des 6 électrons, mais le cas où la molécule est substituée, la nature de ce substituant importe énormément et définira quels emplacement seront visés : (dans la suite de ce point quand je dirai la position ortho, méta ou para c'est relatif au substituant donc si le substituant est au carbone 1, para c'est au niveau du carbone 4)
+\subsubsection{Règle de HOLLEMAN}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{se_6.PNG}
+    \caption{Possibilités d'un benzène disubstitué}
+    \label{fig:my_label}
+\end{figure}
+\begin{itemize}
+    \item substituant donneur (+I, +M) $\longrightarrow$ E$^+$ attaque en ortho ET en para, il y aura alors un mélange des deux composés, \textbf{le plus stable sera en plus grande quantité}
+    \item substituant attracteur (-I, -M) $\longrightarrow$ E$^+$ attaque en position méta, il y aura alors un produit unique.
+\end{itemize}
+La stabilité énoncée ici se fera par rapport à la stabilité électronique (avec la création de liaisons hydrogènes par exemple) ou par stabilité stérique (éloigner le plus possible les radicaux les plus gros).\\
+\textbf{Exemple 2 :} On abordera dans cet exemple le cas d'un substituant donneur et on étudiera le produit résultant :\\
+Dans cette réaction le catalyseur sera l'acide de Lewis AlCl$_3$, on a alors la réaction suivante :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{se_7.PNG}
+    \caption{Exemple de réaction de substitution électrophile}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+Alors la première étape sera la formation du réactif électrophile en s'aidant de l'acide de Lewis :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.8]{se_8.PNG}
+    \caption{Première étape de la SE}
+    \label{fig:my_label}
+\end{figure}
+
+La deuxième étape c'est l'attaque du réactif sur le composé aromatique mais avant ça j'aimerai expliquer la raison pour laquelle le réactif n'attaque qu'en position ortho ou para, et pour cela on va faire toutes les formes limites du phénol : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.8]{se_9.png}
+    \caption{Formes limites du phénol}
+    \label{fig:my_label}
+\end{figure}
+
+On voit bien que le phénol avec ses formes limites a un surplus électronique dans la position ortho et para, donc aura tendance à attirer le réactif électrophile en déficit électronique qui attaquera donc au niveau des deux positions donnant deux composés différents en tant que produits :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.9]{se_10.PNG}
+    \caption{Produits de l'attaque du réactif électrophile}
+    \label{fig:my_label}
+\end{figure}
+
+Cette étape faite les deux molécules sont clairement instables alors elles vont éjecter un proton chacune pour reprendre une forme plus stable.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.7]{se_11.PNG}
+    \caption{Produits de la substitution électrophile}
+    \label{fig:my_label}
+\end{figure}
+
+Et finalement la 4\textsuperscript{ème} étape qui est juste la reformation du catalyseur (dans notre cas c'est le AlCl$_3$).
+\[
+    H^+ + [AlCl_4]^+ \longrightarrow AlCl_3 + HCl
+\]
+Maintenant ayant les deux produits de l'attaque électrophile, maintenant faut voir lequel des deux est le plus stable et par conséquent déduire qualitativement qui est le plus répandu dans la solution.
+
+On a à première vu le produit 2 qui est plus stable par stabilité stérique (les deux radicaux du composé sont le plus loin possible), mais avec une meilleure analyse on peut voir que le produit 1 peut former une liaison hydrogène entre l'hydrogène de la fonction alcool -OH et l'oxygène du radical, et par conséquent on aura dans le produit 1 une stabilité électronique et il faut savoir que les effets électroniques comme création d'un pont hydrogène sont plus forts que les effets stériques et donc stabilisent plus alors, on aura \textbf{le produit 1 en grande quantité par rapport au produit 2}
+\section{Substitution radicalaire (SR)}
+Cette partie on va l'aborder sans s'y approfondir, dans un composé saturé (comme les alcanes) un ou plusieurs groupes d'hydrogènes peuvent être remplacés par un ou plusieurs atomes ou groupes d'atomes selon un processus homolytique, un apport thermique ou l'absorption d'un photon lumineux d'énergie suffisante ou la présence de péroxyde (R-O-O-R) peut déclencher une réaction qui se propage en chaîne selon un mécanimse radicalaire qui se fait en 3 étapes :
+\begin{enumerate}
+    \item Initiation
+    \item Propagation
+    \item Terminaison
+\end{enumerate}
+\textbf{Exemple :} Chloration du CH$_4$ à 300$^o$C ou en présence d'UV (photons énergétiques)
+\begin{description}
+    \item[\'Etape 1 :] Initiation :
+    \[
+        Cl - Cl \longrightarrow 2 Cl^*
+    \]
+    Sous l'effet de la température ou des UV il y a rupture homolytique pour donner les deux radicaux libre Cl$^-$
+    \item[\'Etape 2 :] Propagation :\\
+    Les radicaux formés réagissent avec le substrat pour donner de novueaux radicaux et propager la réaction :
+    \[
+        2 Cl^* + H - CH_3 \longrightarrow HCl + C^*H_3
+    \]
+    \[
+        C^*H_3 + Cl - Cl \longrightarrow CH_3Cl + Cl^*
+    \]
+    \item[\'Etape 3 :] Terminaison\\
+    La chaîne de réaction est rompue suite à l'épuisement des radicaux libres.
+\end{description}
+\chapter {Réactions d'éliminations}
+\minitoc
+Une réaction d'élimination arrive quand une molécule perd deux atomes ou groupes d'atomes portés par deux atomes voisins ce qui conduit à la formation d'une double liaison.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{e_1.PNG}
+    \caption{Réaction d'élimination}
+    \label{fig:my_label}
+\end{figure}
+Ce mécanisme est comparable au mécanisme de substitution nucléophile, il y aura aussi 2 mécanismes différents à envisager : 
+\begin{itemize}
+    \item Départ de X$^-$ et formation d'un carbocation et ensuite départ du H (élimination d'odre 1).
+    \item Départ simultané de H et X (élimination d'odre 2). 
+\end{itemize}
+\textbf{Remarque :}\\
+De façon générale une molécule peut éliminer l'atome X et aussi un atome ou groupe d'atome noté A (qui est un hydrogène dans notre cas).
+\section{\'Elimination d'odre 1 (E1)}
+La E1 se fait en phase liquide et rappelle la SN1, et donc elle se fait en 2 étapes :
+\begin{description}
+    \item[\'Etape 1 :] Formation du carbocation C$^+$\\
+    Sous l'effet \textbf{d'un solvant ionisant} le substrat s'ionise suivant une réaction équilibrée \textbf{lente} et donne un C$^+$ :
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale = 0.8]{e1_1.PNG}
+        \caption{Première étape de la E1}
+        \label{fig:my_label}
+    \end{figure}
+    \newpage
+    \item[\'Etape 2 :] Attaque de la base\\
+    La molécule formée est rapidement attaquée par la base B$^-$ qui arrache un proton ce qui conduit à la formation d'une double liaison C = C :
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.85]{e1_2.PNG}
+        \caption{Deuxième étape de la E1}
+        \label{fig:my_label}
+    \end{figure}
+    
+    \'Etant donné que c'est un carbocation il y a la même probabilité d'attaquer des deux côtés du plan, mais on aura plusieurs composés possibles, donc on choisira le plus stable (donc d'énergie la plus faible) qui sera dans une quantité supérieure.
+\end{description}
+\subsection{Aspect cinétique}
+C'est exactement la même chose que la SN1, je vous renvoie donc au paragraphe le traitant.\\
+On aura en clair la vitesse égale à :
+\[
+    V = k.[substrat]
+\]
+\subsection{Aspect stéréochimique}
+Le carbocation \textbf{stable} de structure plane peut être attaqué par la base des deux côtés du plan par la même probabilité, la réaction est donc \textbf{non stéréospécifique}, elle conduit à \textbf{un mélange des deux stéréoisomères Z et E si le substrat de départ a une configuration unique}.\\
+\textbf{Exemple 1 :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{e1_3.PNG}
+    \caption{Exemple 1 d'une E1}
+    \label{fig:my_label}
+\end{figure}
+
+On peut, à partir de cet exemple faire un ensemble de remarques, tout d'abord, le carbocation formé est clairement stable c'est un carbone tertière et stabilisé par 3 effets inductifs donneurs (+I) ce qui conforte le fait que c'est une E1, ensuite on voit que la base dans cette réaction c'est l'eau, étant un amphotère, et étant donné que le substrat de départ n'a pas une configuration unique, on n'aura pas un produit unique, il n'y a pas de configuration Z et E ce qui peut facilement se voir.\\
+\textbf{Exemple 2 :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.85]{e1_4.PNG}
+    \caption{Exemple 2 d'une E1}
+    \label{fig:my_label}
+\end{figure}
+
+La on voit bien la formation de deux configurations géométriques différentes Z et E, vu la non-stéréospécificité de la réaction. Mais une question se pose, pourquoi à la fin de la première étape y a pas eu départ d'un hydrogène au carbone de droite du C$^+$ ? cette question on va y répondre un peu plus tard dans ce cours, ça fait appel à \textbf{la règle de Zaïtsev}.
+\subsection{Facteurs influençants une E1}
+\begin{itemize}
+    \item \textbf{Classe du substrat :} La E1 est favorisée par des substrats tertiaires ou secondaires pouvant être stabilisés.
+    \item \textbf{Nature du solvant :} La E1 est favorisée par des solvants polaires ou protiques polaires.
+    \item \textbf{Nature du réactif :} Le réactif n'a pas d'influence sur la cinétique de la réaction mais une base faible dilluée dans la solution peut la favoriser, ainsi que ce soit un mauvais nucléophile.
+\end{itemize}
+\subsection{Règle d'orientation de l'élimination (Règle de Zaïtsev)}
+Alors au fin de la première étape, en admettant que le carbone siège de la réaction est dans la chaîne et non au bout, il y aura alors au moins 2 autres carbones rattachés (un de chaque côté), alors est-ce que le départ de l'hydrogène se fait à premier ou deuxième (voire dans le troisième carbone rattaché s'il est tertière), alors la réponse à cette question est que toutes les possibilités se feront sans exception, mais y a un carbone parmis les 3 possibles qui sera largement préféré (avec des proportion de plus de 95\%), suivant la règle de Zaïtsev justement :
+\subsubsection{Règle de Zaïtsev}
+Lors d'une réaction d'élimination, le proton part préférentiellement du carbone le moins hydrogéné pour donner l'alcène le plus substitué (thermodynamiquement le plus stable), on dira alors que la réaction est \textbf{régiosélective}.\\
+\textbf{Exemple 3 :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{e1_5.PNG}
+    \caption{Exemple 1 de la règle de Zaïtsev}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\textbf{Exemple 4 :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.7]{e1_6.PNG}
+    \caption{Exemple 2 de la règle de Zaïtsev}
+    \label{fig:my_label}
+\end{figure}
+
+Dans cet exemple on voit bien que celui de gauche est plus substitué que celui de droite donc il est plus stable.
+\section{\'Elimination d'odre 2 (E2)}
+La réaction se fait par un processus bimoléculaire semblable à la SN2, elle est concertée, continue avec un transfert quasi simultané d'e$^-$. On aura donc une seule étape :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{e2_1.PNG}
+    \caption{\'Elimination d'ordre 2}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+Durant une même étape élémentaire se produisent l'arrachage du proton par la base, la formation de la liaison double et le départ de l'atome d'halogène (nucléofuge) sous forme d'ion halogénure (c'est ca qu'on appelle réaction concertée).
+
+Alors la base attaque le H pour l'arracher et par effet induit la laision C - X se polarisera, cette polarisation est d'autant plus important que la C - X est parallèle à la laision C - H polarisée, on dira alors que c'est une \textbf{attaque anti ou trans-élimination}.
+
+La particularité de la E2 c'est que le produit a une configuration unique il y aura alors au final E \textbf{OU} Z et non pas les deux (bien si de départ il y a une configuration unique).
+\subsection{Aspect cinétique}
+Ce sera le même paragraphe que lors de la SN2 alors je vous renvoie au paragraphe page 72.
+
+On aura la vitesse de réaction suivante (bimoléculaire) 
+\[
+    V = k.[substrat].[reactif]
+\]
+\subsection{Aspect stéréochimique}
+Comme on l'a vu précédemment, la E2 est stéréospécifique (c'est une attaque anti) et on aura aussi la règle de Zaïtsev comme suit :
+\begin{table}[!h]
+    \centering
+   \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Configuration du substrat} & \textbf{Configuration du produit} \\
+        \hline
+        Thréo & E\\
+        \hline
+        Erythro & Z\\
+        \hline
+    \end{tabular} 
+    \caption{Configuration du produit d'une E2}
+    \label{tab:my_label}
+\end{table}
+
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.7]{e2_2.PNG}
+    \caption{Exemple d'une E2}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\section{Différences entre la E1 et E2}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|p{5cm}|p{3cm}|p{2cm}|p{4cm}|}
+        \hline
+        \textbf{Mécanisme} & \textbf{Stéréochimie des produits} & \textbf{Cinétique} & \textbf{Substrat} & \textbf{Réactif} \\
+        \hline
+        \textbf{E1} & Deux configurations géométrique Z et E & Monomoléculaire d'odre 1 V = k.[substrat] & Tertiaire ou secondaire & base faible dilluée, mauvais nucléophile\\
+        \hline
+        \textbf{E2} & Une seule configuration géométrique & Bimoléculaire d'odre 2 V = k.[substrat].[réactif] & Primaire ou secondaire ou tertiaire & Base forte concentrée, mauvais nucléophile\\
+        \hline
+    \end{tabular}
+    \caption{Caractéristiques de la E1 et de la E2}
+    \label{tab:my_label}
+\end{table}   
+\textbf{Remarque : (suite au concours 2021)} La remarque porte sur les applications de l'élimination d'ordre 2. Comme indiqué ci-dessus les trois types de carbones comme substrat sont envisageable et ça mérite une plus ample explication. 
+
+Dans le cas d'une E2 en présence d'une \textbf{base forte concentrée}, le carbone n'aura pas à passer par un carbocation pour permettre l'élimination qu'il soit primaire, secondaire ou tertiaire. Si la base est forte et concentrée elle pourra arracher le groupement directement. 
+Par contre, si on dillue la base fort l'élimination d'ordre 1 sera faite, et par conséquent la concentration de la base implique directement une élimination d'ordre 2.
+\section{Compétition entre les réactions de substitution et d'élimination}
+Alors les réactions de substitutions nucléophiles et d'éliminations font intervenir des réactifs et des substrats sensiblement de même nature, alors il y a compétition entre les deux types de mécanisme dans un solvant donné.\\
+\textbf{Remarque :}\\
+bien sure il n'y a compétition qu'entre des mécanisme de même ordre, SN1/E1 et SN2/E2.\\
+Alors à partir des données de la réaction pour savoir si ça va être une substitution ou une élimination :
+\begin{enumerate}
+    \item Un réactif bon nucléophile mais mauvaise base favorisera une substitution nucléophile.
+    \item Un réactif mauvais nucléophile mais bonne base favorisera une élimination.
+    \item Les réactions de substitutions nucléophiles sont favorisées à température ambiante.
+    \item Les réactions d'éliminations sont favorisées à haute température.
+    \item Si la température est quelconque on va pouvoir avoir les deux réactions.
+\end{enumerate}
+\chapter{Réactions d'additions}
+\minitoc
+Elles sont caractéristiques des molécules insaturées : C=C, C$\equiv$C, C=O, C$\equiv$N ...\\
+Sous l'action d'un réactif E-Z la liaison $\pi$ du substrat s'ouvre, selon le type de rupture de cette liaison (homolytique ou hétérolytique) on distingue 3 mécanismes : 
+\begin{itemize}
+    \item Mécanisme radicalaire (AR).
+    \item Mécanisme ionique :
+    \begin{itemize}
+        \item Mécanisme électrophile (AE).
+        \item Mécanisme nucléophile (AN).
+    \end{itemize}
+\end{itemize}
+\section{Addition électrophile (AE)}
+Alors on a le réactif E$^+$ qui provient de la rupture hétérolytique E-Z suivant cette réaction :
+\[
+    E - Z \longrightarrow E^+ + Z^-
+\]
+Le substrat est généralement un alcène ou un alcyne, les deux ions E$^+$ et Z$^-$ ne s'additionne pas simultanément, tout dépend de la nature de E$^+$, on aura deux cas :
+\begin{itemize}
+    \item Formation d'un carbocation.
+    \item Formation d'un ion ponté.
+\end{itemize}
+\subsection{Cas où le E$^+$ est un H$^+$}
+On aura dans ce cas la formation d'un carbocation.
+\begin{itemize}
+    \item \textbf{\'Etape 1 :} Addition du H$^+$ et formation d'un C$^+$\\
+    L'ion H$^+$ se fixe sur le carbone doublement lié pour former le C$^+$ le plus stable, c'est une réaction lente.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_1.PNG}
+        \caption{Première étape de la AE}
+        \label{fig:my_label}
+    \end{figure}
+
+    L'attaque du H$^+$ est \textbf{régiosélective}, suivant \textbf{la règle de régiosélectivité de Markovnikov}. Qui énonce que lors de l'attaque du réactif électrophile, il faut former le carbocation le plus stable (et cela en s'assurant qu'entre les deux possibilités que le carbocation soit de classe la plus élevée ou stabilisé par effet donneur au mieux), par exemple
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_2.PNG}
+        \caption{Application de la règle de Markonikov}
+        \label{fig:my_label}
+    \end{figure}
+
+    La on peut bien voir que le cas de gauche si on place l'hydrogène à droite on formera un carbocation secondaire stabiliser par un effet inductif donneur (+I) par contre à gauche c'est un carbone primaire qui sera formé stabilisé par effet inductif donneur plus lointain, alors on peut voir facilement que la première possibilité est préférable.
+    \item \textbf{\'Etape 2 :} Addition du Z$^-$\\
+    Le C$^+$ formé est attaqué par le Z$^-$ pour former le produit final, le C$^+$ étant plan l'attaque du Z$^-$ se fait de part et d'autre du plan avec la même probabilité et peut conduire à la formation de deux stéréoisomères, l'addition électrophile n'est \textbf{pas stéréospécifique} dans ce cas.\\
+    \textbf{Remarque :} Il y aura effectivement les 4 stéréoisomères possibles mais à des quantités différentes, ce n'est pas un mélange racémique et par conséquent le produit peut rester optiquement actif.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_3.PNG}
+        \caption{Deuxième étape de la AE}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+
+\textbf{Exemple 1 :} Avec un cycle 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.9]{ae_4.png}
+    \caption{Exemple d'addition électrophile sur un cycle}
+    \label{fig:my_label}
+\end{figure}
+
+Petite précision le $H_2SO_4$ n'est qu'un catalyseur il ne participe pas à la réaction.
+
+Je vous invite à expliquer pourquoi il y a eu attaque du proton H$^+$ sur le carbone en bas et non celui d'en haut.
+
+\textbf{Exemple 2 :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.7]{ae_5.PNG}
+    \caption{Exemple d'addition électrophile sur une chaîne linéaire}
+    \label{fig:my_label}
+\end{figure}
+\subsection{Cas où E$^+$ est un ion halogène X$^+$}
+X$^+$ provient de la rupture hétérolytique de la liaison
+\[
+    X - X \longrightarrow X^+ + X^-
+\]
+L'ion X$^+$ formera un ion ponté ou ion halonium avec le doublet $\pi$
+\begin{itemize}
+    \item \textbf{\'Etape 1 :} Attaque du X$^+$ et formation de l'ion ponté.\\
+    Le X$^+$ attaque avec la même probabilité les 2 côtés de la double liaison ce qui conduit à la formation de deux ions pontés.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_7.PNG}
+        \caption{Formation d'un ion ponté}
+        \label{fig:my_label}
+    \end{figure}
+    
+    Plusieurs sources vont dessiner juste l'un deux, c'est la même chose, étant donné que c'est non régioselective c'est juste sous-etendu comme ici :
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_8.PNG}
+        \caption{Représentation d'un ion ponté}
+        \label{fig:my_label}
+    \end{figure}
+    \newpage
+    \item \textbf{\'Etape 2 :} Addition du X$^-$\\
+    Conséquence de l'encombrement stérique, le X$^-$ ne pourra attaquer que par le côté opposé au X$^+$, on dira que l'attaque est en \textbf{anti}, elle est donc stéréospécifique (on dirait plutôt diastéréosélective) et par conséquent on aura un produit unique (mélange racémique de thréo ou mélange racémique d'erythro on verra ça dans l'exemple)
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[]{ae_9.PNG}
+        \caption{Addition de l'ion halogène}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+Dans ce cas on aura la règle suivante à suivre :
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Configuration Z/E} & \textbf{Configuration Thréo/Erythro}\\
+        \hline
+        E & 2 isomères Erythro\\
+        \hline
+        Z & 2 isomères Thréo\\
+        \hline
+    \end{tabular}
+    \caption{Règle d'inversion de configuration dans le cas d'une AE avec un ion halonium}
+    \label{tab:my_label}
+\end{table}
+
+\textbf{Exemple :} On aura la réaction suivante :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{ae_10.PNG}
+    \caption{Exemple d'une AE dans le cas d'un $E^+ = X^+$}
+    \label{fig:my_label}
+\end{figure}
+
+La première étape : 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{ae_11.PNG}
+    \caption{Première étape de l'exemple}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+La on voit bien que l'attaque se fait des deux côté du plan et on aura alors deux ions pontés différents à quantité égale.\\
+On a la deuxième étape :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.8]{ae_12.PNG}
+    \caption{Deuxième étape de l'exemple}
+    \label{fig:my_label}
+\end{figure}
+
+On voit bien que le produit est un mélange racémique (équimolaire) d'isomère Thréo.
+\section{Addition nucléophile (AN)}
+Elles sont caractéristiaues des composés insaturés dont l'atome de carbone sp$^2$ ou sp est rattaché à un hétéro-atome. Par exemple : C = 0 , C $\equiv$ N ...\\
+Le substrat présente un site de faible densité électronique (dû à la différence d'électronégativité entre le carbone et l'hétéro-atome), on aura alors une réaction \textbf{lente} ou il y aura attaque d'un réactif nucléophile.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{an_1.PNG}
+    \caption{Prmeière étape de l'addition nucléophile}
+    \label{fig:my_label}
+\end{figure}
+
+Donnant ainsi un surplus électronique sur l'hétéro-atome ce qui aménera un électrophile à attaquer suivant une réaction très rapide et donnant le produit final en se rattachant à l'hétéro-atome :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{an_2.PNG}
+    \caption{Deuxième étape de l'addition nucléophile}
+    \label{fig:my_label}
+\end{figure}
+
+Dans cet exemple c'est le proton de la molécule d'eau qui attaque.\\
+On pourrait résumer la réaction dans le schéma suivant :
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{an_4.png}
+    \caption{Récapitulatif de l'addition nucléophile}
+    \label{fig:my_label}
+\end{figure}
+
+\textbf{Remarques :} Les réactifs nucléophiles communément utilisés sont les carbo-anions, ions hydrure H$^-$, des anions ou des molécules neutres R-OH ou R-NH$_2$.\\
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.9]{an_3.PNG}
+    \caption{Exemple d'addition nucléophile}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+\section{Addition radicalaire (AR)}
+Elles sont caractéristiques des alcènes et des alcynes, la réaction suit un mécanisme radicalaire en 3 étapes : intiation, propagation et terminaison.
+
+La réaction est \textbf{catalysée par des peroxydes R-0-0-R} qui permettent la formation de radicaux libres.
+\begin{description}
+    \item[Initiation :] Formation des radicaux libres.
+    \item[Propagation :] Réaction entre les radicaux et le substrat, ce qui induit à avoir le produit et de nouveaux radicaux et ainsi de suite.
+    \item[Terminaison :] Arrêt de la réaction suite à l'épuisement des radicaux libres ou du substrat.
+\end{description}
+\textbf{Exemple :}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.6]{ar_1.png}
+    \caption{Exemple d'addition radicalaire}
+    \label{fig:my_label}
+\end{figure}
+\part{Remerciements}
+\Large
+\vspace*{8cm}
+J'aimerai à la fin de ce livre, vous remercier vous, vous qui êtes arrivés jusqu'ici, que vous soyez étudiants en école, en université institut, classes préparatoires ou juste curieux de savoir quelques choses sur la chimie organique, vous avez fait un effort pour lire ce livre et pour essayer de comprendre ces concepts, que ce soit votre domaine de travail futur ou pas, ca prouve un effort de travail et d'abnégation incroyable et je tiens à vous féliciter. Le monde n'a besoin que de personnes motivées et vous en avez fait preuve. J'ai essayé à mon echelle de faire une source au maximum fiable qui regroupe l'ensemble du programme en chimie organique en école préparatoire en science et technologie, et j'espère que j'ai pu vous aider vous. Encore merci et bon courage pour la suite.
+\end{document} 
