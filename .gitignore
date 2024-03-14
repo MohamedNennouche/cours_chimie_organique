@@ -1,8 +1,6 @@
 *.png
 *.jpeg
 *.jpg 
-*.gif
-*.maf
-*.mtc
-*.mtc0
-*.synctex.gz
+main*
+!main.tex
+!main.pdf
